@@ -1,0 +1,110 @@
+//Background Gradient
+@mixin gradient($start-color, $end-color, $orientation) {
+	background: $start-color;
+	@if $orientation == 'vertical' {
+		background: -webkit-linear-gradient(top, $start-color, $end-color);
+		background: linear-gradient(to bottom, $start-color, $end-color);
+	} @else if $orientation == 'horizontal' {
+		background: -webkit-linear-gradient(left, $start-color, $end-color);
+		background: linear-gradient(to right, $start-color, $end-color);
+	} @else {
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+		background: radial-gradient(ellipse at center, $start-color, $end-color);
+	}
+}
+
+//font face
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: quote($font-name);
+		src: url($file-name + '.ttf') format('truetype');
+	}
+}
+//font size
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+	font-size: $font-size * 1px;
+	// font-size: $font-size * 0.1rem;
+	// example using rem values and 62.5% font-size so 1rem = 10px
+
+	@if $line-height==normal {
+		line-height: normal;
+	} @else {
+		line-height: $line-height / $font-size;
+	}
+
+	@if $letter-spacing==normal {
+		letter-spacing: normal;
+	} @else {
+		letter-spacing: #{$letter-spacing / $font-size}em;
+	}
+}
+
+//flex
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-center-column {
+	@include flex-center;
+	flex-direction: column;
+}
+
+@mixin flex-center-vert {
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-center-horiz {
+	display: flex;
+	justify-content: center;
+}
+
+//center
+@mixin center {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+//bg-gradient
+@mixin bg-gradient($angle: 180deg, $color: #0bd, $amount: 20%) {
+	background: linear-gradient($angle, $color, adjust-hue($color, $amount)) fixed;
+}
+//gradient text
+@mixin gradient-text($angle: 45deg, $color: #f82, $amount: 35%) {
+	color: $color;
+	background: -webkit-linear-gradient($angle, $color, adjust-hue($color, $amount));
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	display: inline-block;
+}
+
+@mixin background-img() {
+	background-position: center;
+	background-repeat: no-repeat;
+}
+@mixin background-img-contain() {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+@mixin background-img-cover() {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin flex-gap($gap) {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: $gap;
+}

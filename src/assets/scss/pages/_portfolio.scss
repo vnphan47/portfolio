@@ -1,0 +1,103 @@
+.personal {
+	width: fit-content;
+	height: 313px;
+	margin: 30px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&--art {
+		height: 100%;
+		position: relative;
+
+		.circle {
+			&__green {
+				width: 241px;
+				height: 241px;
+				background: #d8eed3;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: 2;
+			}
+
+			&__image {
+				width: 282px;
+				height: 282px;
+				border: 3px solid #000;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				z-index: 5;
+				margin-left: 83px;
+			}
+		}
+	}
+
+	&--desc {
+		margin-left: 23px;
+		text-align: left;
+		&__first {
+			font-family: 'Libre Bodoni', serif;
+			font-size: 55px;
+			line-height: 45px;
+			margin-bottom: 15px;
+		}
+
+		&__second {
+			line-height: 35px;
+			width: 345px;
+
+			span {
+				color: $text-pink;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.recent_projects {
+	margin: 50px;
+
+	&--project {
+		margin-top: 32px;
+
+		@include flex-gap(30px);
+
+		.card {
+			width: fit-content;
+			h5 {
+				margin-top: 19px;
+			}
+		}
+	}
+}
+
+.letconnect {
+	margin: 50px;
+
+	&--desc {
+		text-align: center;
+		width: 400px;
+		margin: 10px auto;
+		line-height: 30px;
+	}
+
+	&--mail {
+		display: block;
+		margin-top: 9px;
+		color: $text-brown;
+	}
+
+	&--social {
+		@include flex-gap(10px);
+		margin: 10px auto 30px;
+	}
+
+	&--designed a {
+		color: #000;
+	}
+}
