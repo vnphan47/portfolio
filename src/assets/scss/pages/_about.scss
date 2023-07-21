@@ -1,6 +1,5 @@
 .about {
 	display: flex;
-	margin: 50px 150px;
 	gap: 45px;
 
 	&--left {
@@ -8,6 +7,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
 	}
 
 	&--right {
@@ -66,5 +70,28 @@
 				}
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.about {
+		&--left {
+			width: 345px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		padding: 0 24px;
 	}
 }

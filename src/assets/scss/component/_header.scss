@@ -20,5 +20,56 @@
 			color: $text-black;
 			text-decoration: none;
 		}
+
+		.--active {
+			font-weight: bold;
+			color: $text-pink;
+		}
+
+		&__link:hover {
+			font-weight: bold;
+			color: $text-pink;
+		}
+	}
+}
+
+.title-box {
+	display: flex;
+	gap: 19px;
+
+	.box {
+		width: 94px;
+		height: 18px;
+		background: #b4d9f2;
+	}
+
+	h3 {
+		line-height: 14px;
+	}
+}
+
+.--reverse {
+	flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1025px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+/* Media query for screens up to 768px (smartphones) */
+@media screen and (max-width: 768px) {
+	.header {
+		margin-inline: 24px;
+	}
+
+	.title-box {
+		h3 {
+			line-height: 14px;
+			font-size: 35px;
+		}
 	}
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const PersonalArt = () => {
 	return (
-		<div className='personal'>
+		<div className='personal container'>
 			<div className='personal__art'>
 				<div className='circle--green'></div>
 				<div className='circle--image'>

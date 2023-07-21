@@ -49,7 +49,7 @@
 
 		&--second {
 			line-height: 35px;
-			width: 345px;
+			max-width: 345px;
 
 			span {
 				color: $text-pink;
@@ -65,12 +65,20 @@
 	&__project {
 		margin-top: 32px;
 
-		@include flex-gap(30px);
+		@include grid-template-gap(4, 30px);
 
 		.card {
-			width: fit-content;
+			width: 100%;
+			transition: 1s;
+			cursor: pointer;
+
 			h5 {
 				margin-top: 19px;
+			}
+
+			img {
+				width: 100%;
+				object-fit: cover;
 			}
 		}
 	}
@@ -95,9 +103,37 @@
 	&__social {
 		@include flex-gap(10px);
 		margin: 10px auto 30px;
+		flex-wrap: nowrap;
 	}
 
 	&__designed a {
 		color: #000;
 	}
 }
+
+@media screen and (max-width: 1025px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+	.recent_projects__project {
+		@include grid-template-gap(1, 30px);
+	}
+}
+
+// @media screen and (max-width: 1025px) {
+// }
+
+// @media screen and (min-width: 769px) and (max-width: 1024px) {
+// }
+
+// @media only screen and (min-width: 1024px) {
+// }
+
+// @media screen and (max-width: 768px) {
+// }

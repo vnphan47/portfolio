@@ -108,3 +108,9 @@
 	flex-wrap: wrap;
 	gap: $gap;
 }
+
+@mixin grid-template-gap($column, $gap) {
+	display: grid;
+	grid-template-columns: repeat($column, calc((100% - ($gap * calc($column - 1))) / $column));
+	gap: $gap;
+}

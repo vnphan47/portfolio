@@ -3,12 +3,13 @@ import { LineDots } from '../../ components/LineDots';
 import { LetConnect } from '../portfolio/LetConnect';
 import { TextAboutMe } from './TextAboutMe';
 import { ImagesCat } from './ImagesCat';
+import { TitleBox } from '../../ components/TitleBox';
 
 export const AboutPage = () => {
 	return (
 		<div>
 			<LineDots />
-			<div className='wrapper'>
+			<div className='container'>
 				<div className='about'>
 					<div className='about--left'>
 						<img src='/images/about/IMG_6454 1.png' alt='avt' />
@@ -16,8 +17,7 @@ export const AboutPage = () => {
 					</div>
 					<div className='about--right'>
 						<div className='row-title'>
-							<div className='box'></div>
-							<h3 className='txt-title'>about me</h3>
+							<TitleBox title='about me' />
 						</div>
 						<TextAboutMe />
 						<ImagesCat />
