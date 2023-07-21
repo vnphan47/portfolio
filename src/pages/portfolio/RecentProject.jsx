@@ -32,7 +32,7 @@ export const RecentProject = () => {
 	return (
 		<div className='recent_projects'>
 			<h3 className='txt-title'>recent projects</h3>
-			<div className='recent_projects--project'>{_renderProject()}</div>
+			<div className='recent_projects__project'>{_renderProject()}</div>
 		</div>
 	);
 };

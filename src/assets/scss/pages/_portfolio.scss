@@ -6,12 +6,12 @@
 	justify-content: space-between;
 	align-items: center;
 
-	&--art {
+	&__art {
 		height: 100%;
 		position: relative;
 
 		.circle {
-			&__green {
+			&--green {
 				width: 241px;
 				height: 241px;
 				background: #d8eed3;
@@ -22,7 +22,7 @@
 				z-index: 2;
 			}
 
-			&__image {
+			&--image {
 				width: 282px;
 				height: 282px;
 				border: 3px solid #000;
@@ -37,17 +37,17 @@
 		}
 	}
 
-	&--desc {
+	&__desc {
 		margin-left: 23px;
 		text-align: left;
-		&__first {
+		&--first {
 			font-family: 'Libre Bodoni', serif;
 			font-size: 55px;
 			line-height: 45px;
 			margin-bottom: 15px;
 		}
 
-		&__second {
+		&--second {
 			line-height: 35px;
 			width: 345px;
 
@@ -62,7 +62,7 @@
 .recent_projects {
 	margin: 50px;
 
-	&--project {
+	&__project {
 		margin-top: 32px;
 
 		@include flex-gap(30px);
@@ -79,25 +79,25 @@
 .letconnect {
 	margin: 50px;
 
-	&--desc {
+	&__desc {
 		text-align: center;
 		width: 400px;
 		margin: 10px auto;
 		line-height: 30px;
 	}
 
-	&--mail {
+	&__mail {
 		display: block;
 		margin-top: 9px;
 		color: $text-brown;
 	}
 
-	&--social {
+	&__social {
 		@include flex-gap(10px);
 		margin: 10px auto 30px;
 	}
 
-	&--designed a {
+	&__designed a {
 		color: #000;
 	}
 }

@@ -7,14 +7,14 @@ export const LetConnect = ({ isNotShowDesignedBy = false, isShowOnlyDesignedBy =
 		return (
 			<Fragment>
 				<h3 className='txt-title'>let’s connect</h3>
-				<div className='letconnect--desc'>
+				<div className='letconnect__desc'>
 					Any questions, collaboration inquiries, or simply wish to say hello, feel free
 					to get in touch through:
 				</div>
-				<a className='letconnect--mail' href='mailto:syrenaphan47@gmail.com'>
+				<a className='letconnect__mail' href='mailto:syrenaphan47@gmail.com'>
 					syrenaphan47@gmail.com
 				</a>
-				<div className='letconnect--social'>
+				<div className='letconnect__social'>
 					<img src='/images/main/ball.png' alt='ball' />
 					<img src='/images/main/ins.png' alt='ins' />
 				</div>
@@ -26,7 +26,7 @@ export const LetConnect = ({ isNotShowDesignedBy = false, isShowOnlyDesignedBy =
 		if (isNotShowDesignedBy) return null;
 
 		return (
-			<p className='letconnect--designed'>
+			<p className='letconnect__designed'>
 				Website is designed by <a href='#'>Vy Phan</a>
 			</p>
 		);
