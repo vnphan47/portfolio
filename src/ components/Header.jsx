@@ -29,7 +29,7 @@ export const Header = () => {
 			<div>
 				<img
 					className='logo'
-					src='/images/main/logo.png'
+					src='/images/main/Logo.png'
 					alt='log'
 					onClick={() => navigate('/')}
 				/>
