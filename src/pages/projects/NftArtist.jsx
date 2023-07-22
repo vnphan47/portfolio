@@ -43,9 +43,9 @@ export const NftArtist = () => {
 	};
 
 	const _renderChippies = () => {
-		return chippies.map((item) => {
+		return chippies.map((item, index) => {
 			return (
-				<div className='chippy'>
+				<div key={index.toString()} className='chippy'>
 					<img src={item.src} alt={item.title} />
 					<span>{item.title}</span>
 				</div>
@@ -56,8 +56,8 @@ export const NftArtist = () => {
 	const _renderSneaks = () => {
 		const columns = chunkArray(sneaks, width > 768 ? 5 : 10);
 
-		return columns.map((column) => (
-			<div className='nft-sneak__column'>
+		return columns.map((column, indexCol) => (
+			<div key={indexCol.toString()} className='nft-sneak__column'>
 				{column.map((item, index) => (
 					<img
 						className='image--full'

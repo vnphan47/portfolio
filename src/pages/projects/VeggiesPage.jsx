@@ -6,14 +6,14 @@ import { LetConnect } from '../portfolio/LetConnect';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
 export const VeggiesPage = () => {
-	const { width, height } = useWindowSize();
+	const { width } = useWindowSize();
 
 	const colors = ['#f15c67', '#81bb5e', '#e8c44b', '#9076a6', '#f09659'];
 
 	const _renderColor = () => {
 		const _render = () => {
 			return colors.map((item) => (
-				<div className='talent__color--item'>
+				<div key={item} className='talent__color--item'>
 					<div className='circle' style={{ backgroundColor: item }}></div>
 					<p className='text'>{item}</p>
 				</div>
