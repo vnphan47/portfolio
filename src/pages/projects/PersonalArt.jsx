@@ -42,8 +42,8 @@ export const PersonalArt = () => {
 					</div>
 				</div>
 				<div className='col-2'>
-					<img src='/images/art/TỚ KỂ CẬU NGHE 2.png' alt='' />
-					<img src='/images/art/Anh là thanh xuân 1.png' alt='' />
+					<img src='/images/art/to_ke_cau_nghe.png' alt='' />
+					<img src='/images/art/anh_la_thanh_xuan.png' alt='' />
 					<img className='img-full' src='/images/art/RarityPos copy 1.png' alt='' />
 				</div>
 			</Fragment>
