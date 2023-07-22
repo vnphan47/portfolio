@@ -24,14 +24,6 @@ export const defaultRouter = [
 		isNavlink: true,
 	},
 	{
-		path: '/contact',
-		component: <ContactPage />,
-		exact: true,
-		icon: null,
-		title: 'Contact',
-		isNavlink: true,
-	},
-	{
 		path: '/veggies',
 		component: <VeggiesPage />,
 		exact: true,

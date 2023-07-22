@@ -3,17 +3,36 @@ import { ProjectHeader } from './ProjectHeader';
 import { LineDots } from '../../ components/LineDots';
 import { TitleBox } from '../../ components/TitleBox';
 import { LetConnect } from '../portfolio/LetConnect';
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 export const VeggiesPage = () => {
+	const { width, height } = useWindowSize();
+
 	const colors = ['#f15c67', '#81bb5e', '#e8c44b', '#9076a6', '#f09659'];
 
 	const _renderColor = () => {
-		return colors.map((item) => (
-			<div className='talent__color--item'>
-				<div className='circle' style={{ backgroundColor: item }}></div>
-				<p className='text'>{item}</p>
-			</div>
-		));
+		const _render = () => {
+			return colors.map((item) => (
+				<div className='talent__color--item'>
+					<div className='circle' style={{ backgroundColor: item }}></div>
+					<p className='text'>{item}</p>
+				</div>
+			));
+		};
+
+		return <div className='talent__color'>{_render()}</div>;
+	};
+
+	const _renderDesc = () => {
+		return (
+			<p className='social__desc'>
+				Kids around the country (or world!) could create and submit their own short videos
+				and ads promoting their favorite fruit or vegetable.
+				<br />
+				<br />
+				Winning videos would be streamed on social media!
+			</p>
+		);
 	};
 
 	return (
@@ -37,7 +56,7 @@ export const VeggiesPage = () => {
 							In this program, kids will create and present their own performances to
 							promote fruits and veggies to their peers and families.
 						</p>
-						<div className='talent__color'>{_renderColor()}</div>
+						{width > 768 && _renderColor()}
 					</div>
 				</div>
 				<div className='veggies__wrapper--right'>
@@ -55,6 +74,7 @@ export const VeggiesPage = () => {
 					</div>
 				</div>
 			</div>
+			{width <= 768 && <div className='container container__color'>{_renderColor()}</div>}
 
 			<LineDots />
 
@@ -65,6 +85,7 @@ export const VeggiesPage = () => {
 						src='/images/veggies/VGTSocialMediaCOntest(1) 1.png'
 						alt='VGTSocialMediaCOntest'
 					/>
+					{width <= 768 && _renderDesc()}
 				</div>
 				<div className='veggies__wrapper--right'>
 					<div className='social'>
@@ -74,13 +95,7 @@ export const VeggiesPage = () => {
 							boxWidth='138px'
 							isReverse
 						/>
-						<p className='social__desc'>
-							Kids around the country (or world!) could create and submit their own
-							short videos and ads promoting their favorite fruit or vegetable.
-							<br />
-							<br />
-							Winning videos would be streamed on social media!
-						</p>
+						{width > 768 && _renderDesc()}
 
 						<div className='social__image'>
 							<img
@@ -131,7 +146,7 @@ export const VeggiesPage = () => {
 						<h5>coloring sheets</h5>
 						<img
 							className='image--full'
-							src='/images/veggies/Group 13.png'
+							src={`/images/veggies/${width > 1024 ? 'Group 13' : 'Group 47'}.png`}
 							alt='Group'
 						/>
 					</div>

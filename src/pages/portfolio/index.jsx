@@ -6,7 +6,7 @@ import { LetConnect } from './LetConnect';
 
 export const Portfolio = () => {
 	return (
-		<div className='wrapper'>
+		<div className='portfolio__wrapper'>
 			<PersonalArt />
 			<LineDots />
 			<RecentProject />

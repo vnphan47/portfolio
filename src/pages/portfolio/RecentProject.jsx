@@ -67,7 +67,7 @@ export const RecentProject = () => {
 	};
 
 	return (
-		<div className='recent_projects'>
+		<div className='recent_projects container'>
 			<h3 className='txt-title'>recent projects</h3>
 			<div className='recent_projects__project'>{_renderProject()}</div>
 		</div>

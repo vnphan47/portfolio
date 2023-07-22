@@ -1,5 +1,5 @@
 .header__project {
-	margin: 50px auto;
+	margin: 0 auto 50px;
 
 	&--heading {
 		text-align: center;
@@ -15,6 +15,10 @@
 		word-spacing: 2%;
 		font-weight: 300;
 	}
+}
+
+.header__project.container {
+	padding-top: 0;
 }
 
 .veggies {
@@ -48,34 +52,9 @@
 			}
 		}
 
-		.talent__color {
-			display: flex;
-			justify-content: space-between;
-
-			.circle {
-				width: 75px;
-				height: 75px;
-				border-radius: 50%;
-				margin: 0 auto 17px;
-			}
-
-			.text {
-				text-transform: uppercase;
-				align-items: center;
-			}
-		}
-
 		&--right {
 			.social {
 				width: 100%;
-
-				&__desc {
-					margin: 32px auto 50px;
-					text-align: left;
-					line-height: 30px;
-					word-spacing: 2%;
-					font-size: 20px;
-				}
 
 				&__image {
 					display: flex;
@@ -83,6 +62,15 @@
 				}
 			}
 		}
+
+		.social__desc {
+			margin: 32px auto 50px;
+			text-align: left;
+			line-height: 30px;
+			word-spacing: 2%;
+			font-size: 20px;
+		}
+
 		.freebies {
 			h5 {
 				font-weight: 600;
@@ -110,11 +98,26 @@
 			}
 		}
 	}
+
+	.talent__color {
+		@include grid-template-gap(5, 20px);
+
+		.circle {
+			width: 100%;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			margin: 0 auto 17px;
+		}
+
+		.text {
+			text-transform: uppercase;
+			align-items: center;
+		}
+	}
 }
 
 .nft {
 	.header__project {
-		margin-bottom: 32px;
 		&--desc {
 			max-width: 920px;
 			margin: 0 auto;
@@ -125,7 +128,7 @@
 		display: flex;
 		justify-content: center;
 		gap: 17px;
-		margin: 0 auto 50px;
+		margin-top: 32px;
 	}
 
 	&-about {
@@ -238,9 +241,8 @@
 			}
 
 			.row__image {
+				@include grid-template-gap(2, 20px);
 				width: 100%;
-				display: flex;
-				justify-content: space-between;
 				aspect-ratio: 2.1/1;
 
 				img {
@@ -256,9 +258,7 @@
 	}
 
 	&__third {
-		display: grid;
-		grid-template-columns: 50% 50%;
-		gap: 34px;
+		@include grid-template-gap(2, 34px);
 
 		img {
 			width: 100%;
@@ -335,10 +335,23 @@
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media screen and (max-width: 1025px) {
+	.veggies .talent__color .text {
+		font-size: 14px;
+	}
 }
 /* Media query for screens up to 768px (smartphones) */
 @media screen and (max-width: 768px) {
+	.header__project {
+		&--desc {
+			line-height: 37px;
+		}
+	}
+
+	.btn {
+		font-size: 16px;
+	}
+
 	.veggies {
 		&__wrapper {
 			.freebies {
@@ -359,12 +372,45 @@
 					}
 				}
 			}
+
+			.social__desc {
+				margin: 0;
+			}
+		}
+
+		.social {
+			&__image {
+				flex-direction: column;
+				margin-top: 10px;
+				.image--full {
+					margin-bottom: 15px;
+				}
+			}
 		}
 
 		&__third {
 			@include grid-template-gap(1, 28px);
 		}
 	}
+
+	.veggies__grid.container {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		@include grid-template-gap(2, 18px);
+	}
+
+	.container.container__color {
+		padding-top: 0;
+
+		.circle {
+			width: 60px;
+		}
+
+		.text {
+			font-size: 14px;
+		}
+	}
+
 	.nft {
 		&-about {
 			.row__first {
@@ -373,6 +419,10 @@
 
 			&__left {
 				width: 100%;
+
+				&--desc {
+					text-align: center;
+				}
 			}
 		}
 
@@ -391,12 +441,17 @@
 
 		&-sneak {
 			@include grid-template-gap(2, 17px);
+
+			&__column:nth-child(even) {
+				padding-top: 0px;
+				transform: translateY(-20px);
+			}
 		}
 	}
 
 	.talkshow {
 		&__first {
-			flex-wrap: wrap-reverse;
+			flex-wrap: wrap;
 			width: 100%;
 			aspect-ratio: unset;
 			gap: 32px;
@@ -420,5 +475,32 @@
 				gap: 18px;
 			}
 		}
+
+		&__third {
+			@include grid-template-gap(2, 20px);
+		}
+
+		.img-full {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.art {
+		&__grid {
+			display: block;
+			img {
+				margin-bottom: 18px;
+			}
+			.row__image--2 {
+				@include grid-template-gap(2, 18px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.social h3.txt-title {
+		line-height: 28px;
 	}
 }

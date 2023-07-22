@@ -6,9 +6,7 @@ import { LetConnect } from '../portfolio/LetConnect';
 export const TalkShow = () => {
 	return (
 		<div className='talkshow'>
-			<div className='container'>
-				<ProjectHeader heading='TALKSHOW “ABOUT ME”' />
-			</div>
+			<ProjectHeader heading='TALKSHOW “ABOUT ME”' />
 			<LineDots />
 
 			<div className='container'>

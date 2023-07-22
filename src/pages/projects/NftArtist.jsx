@@ -5,8 +5,10 @@ import { LineDots } from '../../ components/LineDots';
 import { TitleBox } from '../../ components/TitleBox';
 import { chunkArray } from '../../helpers';
 import { LetConnect } from '../portfolio/LetConnect';
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 export const NftArtist = () => {
+	const { width } = useWindowSize();
 	const [sneaks, setSneaks] = useState([]);
 
 	const refSneak = useRef(null);
@@ -52,7 +54,7 @@ export const NftArtist = () => {
 	};
 
 	const _renderSneaks = () => {
-		const columns = chunkArray(sneaks, 5);
+		const columns = chunkArray(sneaks, width > 768 ? 5 : 10);
 
 		return columns.map((column) => (
 			<div className='nft-sneak__column'>
@@ -68,23 +70,28 @@ export const NftArtist = () => {
 		));
 	};
 
+	const _renderButton = () => {
+		return (
+			<div className='nft__buttons'>
+				<ButtonP
+					text='view site'
+					onClick={() =>
+						window.open('https://magiceden.io/marketplace/chippies_nft', '_blank')
+					}
+				/>
+				<ButtonP text='sneak peak' onClick={() => refSneak.current.scrollIntoView()} />
+			</div>
+		);
+	};
+
 	return (
 		<div className='nft'>
-			<div className='container'>
-				<ProjectHeader
-					heading='FREELANCE NFT ARTIST'
-					description='Co-Founded and led the art team of an NFT Collection on Solana Blockchain from pre-money valuation to post-money valuation '
-				/>
-				<div className='nft__buttons'>
-					<ButtonP
-						text='view site'
-						onClick={() =>
-							window.open('https://magiceden.io/marketplace/chippies_nft', '_blank')
-						}
-					/>
-					<ButtonP text='sneak peak' onClick={() => refSneak.current.scrollIntoView()} />
-				</div>
-			</div>
+			<ProjectHeader
+				heading='FREELANCE NFT ARTIST'
+				description='Co-Founded and led the art team of an NFT Collection on Solana Blockchain from pre-money valuation to post-money valuation '
+				footer={_renderButton()}
+			/>
+
 			<LineDots />
 
 			<div className='nft-about container'>

@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
 
 export const LetConnect = ({ isNotShowDesignedBy = false, isShowOnlyDesignedBy = false }) => {
+	const _handleClickSocial = (url) => {
+		window.open(url, '_blank');
+	};
 	const _renderContent = () => {
 		if (isShowOnlyDesignedBy) return null;
 
@@ -15,8 +18,16 @@ export const LetConnect = ({ isNotShowDesignedBy = false, isShowOnlyDesignedBy =
 					syrenaphan47@gmail.com
 				</a>
 				<div className='letconnect__social'>
-					<img src='/images/main/ball.png' alt='ball' />
-					<img src='/images/main/ins.png' alt='ins' />
+					<img
+						src='/images/main/ball.png'
+						alt='ball'
+						onClick={() => _handleClickSocial('https://dribbble.com/pn_lanvyy')}
+					/>
+					<img
+						src='/images/main/ins.png'
+						alt='ins'
+						onClick={() => _handleClickSocial('https://www.instagram.com/pn_lanvyy/')}
+					/>
 				</div>
 			</Fragment>
 		);

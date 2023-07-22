@@ -1,6 +1,5 @@
 .personal {
 	width: fit-content;
-	height: 313px;
 	margin: 30px auto;
 	display: flex;
 	justify-content: space-between;
@@ -9,6 +8,7 @@
 	&__art {
 		height: 100%;
 		position: relative;
+		height: 313px;
 
 		.circle {
 			&--green {
@@ -59,6 +59,10 @@
 	}
 }
 
+.personal.container {
+	padding-top: 0;
+}
+
 .recent_projects {
 	margin: 50px;
 
@@ -89,7 +93,7 @@
 
 	&__desc {
 		text-align: center;
-		width: 400px;
+		max-width: 400px;
 		margin: 10px auto;
 		line-height: 30px;
 	}
@@ -104,6 +108,7 @@
 		@include flex-gap(10px);
 		margin: 10px auto 30px;
 		flex-wrap: nowrap;
+		cursor: pointer;
 	}
 
 	&__designed a {
@@ -121,8 +126,27 @@
 }
 
 @media screen and (max-width: 768px) {
-	.recent_projects__project {
-		@include grid-template-gap(1, 30px);
+	.recent_projects {
+		margin: 50px 24px;
+
+		&__project {
+			@include grid-template-gap(1, 30px);
+		}
+	}
+
+	.personal.container {
+		flex-direction: column;
+		gap: 30px;
+		max-width: 80%;
+	}
+
+	.personal__art {
+		width: 100%;
+
+		.circle--image {
+			position: absolute;
+			right: 0;
+		}
 	}
 }
 

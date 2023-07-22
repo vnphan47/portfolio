@@ -7,10 +7,12 @@
 	.logo {
 		height: 95px;
 		object-fit: cover;
+		cursor: pointer;
 	}
 
 	.nav {
 		display: flex;
+		justify-content: flex-end;
 		gap: 30px;
 
 		&__link {
@@ -53,6 +55,9 @@
 }
 
 @media screen and (max-width: 1025px) {
+	.header {
+		margin: 24px;
+	}
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -63,10 +68,23 @@
 /* Media query for screens up to 768px (smartphones) */
 @media screen and (max-width: 768px) {
 	.header {
-		margin-inline: 24px;
+		margin: 24px;
+
+		.nav {
+			flex-wrap: wrap;
+		}
+
+		.logo {
+			height: 60px;
+		}
 	}
 
 	.title-box {
+		.box {
+			width: 67px !important;
+			background: #b4d9f2;
+		}
+
 		h3 {
 			line-height: 14px;
 			font-size: 35px;
