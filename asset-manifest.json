@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/portfolio_vypham/static/css/main.ced6046b.css",
+    "main.js": "/portfolio_vypham/static/js/main.df06b88d.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio_vypham/static/js/787.1ed0c42c.chunk.js",
+    "static/media/EasterMale8.png": "/portfolio_vypham/static/media/EasterMale8.31b18b83fff654d06e69.png",
+    "static/media/Artist10.png": "/portfolio_vypham/static/media/Artist10.c9283f00c2af8e177ee9.png",
+    "static/media/Astronaut 17.png": "/portfolio_vypham/static/media/Astronaut 17.0a754266ecc2e553baaa.png",
+    "static/media/EasterFemale6.png": "/portfolio_vypham/static/media/EasterFemale6.18fd71649b4497ce516c.png",
+    "static/media/Golden Knight 11.png": "/portfolio_vypham/static/media/Golden Knight 11.dfdfa0d3a34d99f2358a.png",
+    "static/media/Santa9.png": "/portfolio_vypham/static/media/Santa9.dafa5d0575679b0d012b.png",
+    "static/media/MadScientist1.png": "/portfolio_vypham/static/media/MadScientist1.8e9e6fd5b94c58515bb7.png",
+    "static/media/Police 13.png": "/portfolio_vypham/static/media/Police 13.cd67e88c2910ff638cd2.png",
+    "static/media/Justin Bieber 17.png": "/portfolio_vypham/static/media/Justin Bieber 17.77ced9c08945283a3b33.png",
+    "static/media/Halloween 14.png": "/portfolio_vypham/static/media/Halloween 14.7b02a7798ab8044de75a.png",
+    "static/media/Samurai4.png": "/portfolio_vypham/static/media/Samurai4.20cff8a38299b330a5f8.png",
+    "static/media/SAC 18.png": "/portfolio_vypham/static/media/SAC 18.fb70bed4be6a9086a916.png",
+    "static/media/St Patrick3.png": "/portfolio_vypham/static/media/St Patrick3.0bb16b10d63e554bd4a0.png",
+    "static/media/Bullish 12.png": "/portfolio_vypham/static/media/Bullish 12.43475d208286ee5d80db.png",
+    "static/media/Marilyn 15.png": "/portfolio_vypham/static/media/Marilyn 15.71fccca0e1ecdf3ba61f.png",
+    "static/media/Poker2.png": "/portfolio_vypham/static/media/Poker2.cc00c9c9f55a8347faf3.png",
+    "static/media/Cookie 19.png": "/portfolio_vypham/static/media/Cookie 19.eeb97423cac73ae334d7.png",
+    "static/media/1201_7.png": "/portfolio_vypham/static/media/1201_7.f3ec5bafca397ee544c7.png",
+    "static/media/Dal Lama 16.png": "/portfolio_vypham/static/media/Dal Lama 16.c9184564390fd33456a4.png",
+    "static/media/X-Ray5.png": "/portfolio_vypham/static/media/X-Ray5.2bf73bf9fe338f3c69d2.png",
+    "index.html": "/portfolio_vypham/index.html",
+    "main.ced6046b.css.map": "/portfolio_vypham/static/css/main.ced6046b.css.map",
+    "main.df06b88d.js.map": "/portfolio_vypham/static/js/main.df06b88d.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio_vypham/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ced6046b.css",
+    "static/js/main.df06b88d.js"
+  ]
+}
