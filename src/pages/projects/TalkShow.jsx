@@ -2,8 +2,27 @@ import React from 'react';
 import { ProjectHeader } from './ProjectHeader';
 import { LineDots } from '../../ components/LineDots';
 import { LetConnect } from '../portfolio/LetConnect';
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 export const TalkShow = () => {
+	const { width } = useWindowSize();
+
+	const _renderTicket = () => {
+		return (
+			<div className='talkshow__second--right'>
+				<img
+					className='image--full'
+					src='/images/talkshow/ve_mat_truoc.png'
+					alt='ve_mat_truoc'
+				/>
+				<img
+					className='image--full'
+					src='/images/talkshow/ve_mat_sau.png'
+					alt='ve_mat_sau'
+				/>
+			</div>
+		);
+	};
 	return (
 		<div className='talkshow'>
 			<ProjectHeader heading='TALKSHOW “ABOUT ME”' />
@@ -27,6 +46,8 @@ export const TalkShow = () => {
 							are interested in it to connect, gain knowledge, and listen to the guest
 							stories.
 						</p>
+						{width <= 768 && _renderTicket()}
+
 						<div className='row__image'>
 							<img
 								className='image--full'
@@ -40,18 +61,7 @@ export const TalkShow = () => {
 							/>
 						</div>
 					</div>
-					<div className='talkshow__second--right'>
-						<img
-							className='image--full'
-							src='/images/talkshow/Vé Mặt Trước 1.png'
-							alt=''
-						/>
-						<img
-							className='image--full'
-							src='/images/talkshow/Vé Mặt Sau 1.png'
-							alt=''
-						/>
-					</div>
+					{width > 768 && _renderTicket()}
 				</div>
 			</div>
 
