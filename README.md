@@ -10,4 +10,4 @@
 
 ### `sudo docker pull huunhatdev/vyphan:1.5`
 
-### `sudo docker run -d -p 3000:80 --name vyphan huunhatdev/vyphan:1.5`
+### `sudo docker run -d -p 3001:80 --name vyphan huunhatdev/vyphan:1.5`
