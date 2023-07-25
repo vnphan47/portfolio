@@ -375,6 +375,11 @@
 
 			.social__desc {
 				margin: 0;
+				font-size: 16px;
+			}
+
+			&--left .talent p {
+				font-size: 16px;
 			}
 		}
 
@@ -422,6 +427,7 @@
 
 				&--desc {
 					text-align: center;
+					font-size: 16px;
 				}
 			}
 		}
@@ -467,7 +473,7 @@
 			&--left {
 				p {
 					text-align: center;
-					font-size: 20px;
+					font-size: 16px;
 				}
 			}
 
