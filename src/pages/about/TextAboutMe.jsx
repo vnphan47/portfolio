@@ -6,7 +6,7 @@ export const TextAboutMe = () => {
 			<div className='row-desc'>
 				<p>
 					I am <span className='--bold'>Vy Phan</span>, a freelance illustrator and
-					graphic designer based in Massachusetts. I grew up in Ho Chi Minh City, Vietnam
+					graphic designer based in the United States. I grew up in Ho Chi Minh City, Vietnam
 					and embarked on a transformative journey when I began studying abroad in the
 					United States in 2018.
 					<br />

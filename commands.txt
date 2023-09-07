@@ -1,0 +1,12 @@
+start:
+
+sudo npm start
+
+web se start o: http://localhost:3000
+
+
+
+commit va save code o github:
+
+cd /Users/vyphan/Documents/portfolio
+

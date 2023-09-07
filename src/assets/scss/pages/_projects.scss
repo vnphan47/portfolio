@@ -4,16 +4,20 @@
 	&--heading {
 		text-align: center;
 		text-transform: uppercase;
-		font-size: 25px;
-		font-weight: 600;
+		font-size: 35px;
+		font-weight: 700;
+		font-family: Inter;
 		margin-bottom: 15px;
 	}
 
 	&--desc {
 		text-align: center;
-		font-size: 30px;
-		word-spacing: 2%;
-		font-weight: 300;
+		font-size: 20px;
+		font-family: Inter;
+		word-spacing: 4%;
+		font-weight: 400;
+		width: 684px;
+		line-height: 30px;
 	}
 }
 
@@ -21,11 +25,51 @@
 	padding-top: 0;
 }
 
+.blender {
+	&__grid {
+		@include grid-template-gap(2, 30px);
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+
+		img.img-full {
+			grid-column: span 2;
+		}
+
+		.col-1 {
+			@include grid-template-gap(2, 30px);
+
+			grid-column: span 2;
+
+			img.img-full {
+				grid-column: span 2;
+			}
+
+			img:nth-child(-n + 2) {
+				aspect-ratio: 2.3/3;
+			}
+		}
+	}
+}
 .veggies {
 	margin-bottom: 50px;
+	.header__project {
+		&--desc {
+			max-width: 684px;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 20px;
+			line-height: 30px;
+			word-spacing: 2%;
+			margin-top: 27px;
+			margin-bottom: 32px;
+		}
+	}
 
 	&__grid {
-		@include grid-template-gap(2, 28px);
+		@include grid-template-gap(2, 30px);
 	}
 
 	&__wrapper {
@@ -37,7 +81,7 @@
 		.image--full {
 			width: 100%;
 			object-fit: cover;
-			margin-bottom: 30px;
+			margin-bottom: -50px;
 		}
 
 		&--left {
@@ -45,8 +89,6 @@
 				p {
 					width: 100%;
 					text-align: justify;
-					font-size: 20px;
-					line-height: 30px;
 					margin-bottom: 30px;
 				}
 			}
@@ -63,47 +105,49 @@
 			}
 		}
 
-		.social__desc {
-			margin: 32px auto 50px;
-			text-align: left;
-			line-height: 30px;
-			word-spacing: 2%;
-			font-size: 20px;
-		}
 
-		.freebies {
-			h5 {
-				font-weight: 600;
+		h5 {
+				font-weight: 700;
 				font-size: 24px;
 				word-spacing: 2%;
 				text-align: left;
-			}
+		}
 
-			.postcards {
+		.postcards {
 				margin-top: 32px;
 				display: flex;
-				gap: 36px;
+				gap: 30px;
 				width: 100%;
 
 				&__left {
-					width: 60%;
+					width: 50%;
 					.image--full {
-						margin-top: 23px;
+						margin-top: 32px;
 					}
 				}
 
 				&__right {
-					flex: 1;
+					width: 50%;
+					.image--full {
+						margin-top: 55px;
+					}
 				}
 			}
+		.coloring {
+			.image--full {
+				margin-top: 32px;
+				margin-bottom: 0px;
+				width: 100%;
+			}		
 		}
 	}
 
 	.talent__color {
 		@include grid-template-gap(5, 20px);
+		margin-bottom: -50px;
 
 		.circle {
-			width: 100%;
+			width: 45%;
 			aspect-ratio: 1/1;
 			border-radius: 50%;
 			margin: 0 auto 17px;
@@ -115,12 +159,40 @@
 		}
 	}
 }
+.cookbook {
+	margin-bottom: 50px;
+	.header__project {
+		&--desc {
+			max-width: 920px;
+			max-width: 920px;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 20px;
+			line-height: 30px;
+			word-spacing: 2%;
+			margin-top: 27px;
+			margin-bottom: -32px;
+		}
+	}
+
+	&__pic {
+		.image-full {
+			width: 100%;
+			margin-bottom: 32px;
+		}
+	}
+}
 
 .nft {
 	.header__project {
 		&--desc {
 			max-width: 920px;
 			margin: 0 auto;
+			text-align: center;
+			font-size: 20px;
+			line-height: 30px;
+			word-spacing: 2%;
+			margin-top: 27px;
 		}
 	}
 
@@ -128,42 +200,16 @@
 		display: flex;
 		justify-content: center;
 		gap: 17px;
-		margin-top: 32px;
+		margin-top: 19px;
 	}
 
-	&-about {
-		.row__first {
-			display: flex;
-			gap: 20px;
-		}
-
-		&__left {
-			width: 50%;
-			&--desc {
-				text-align: left;
-				font-size: 20px;
-				line-height: 30px;
-				word-spacing: 2%;
-				margin-top: 32px;
-			}
-		}
-
-		&__right {
-			flex: 1;
-			img {
-				width: 100%;
-			}
-		}
-	}
 
 	&-chippies {
-		margin-top: 50px;
+		margin-top: -70px;
 
-		@include grid-template-gap(3, 23px);
+		@include grid-template-gap(3, 30px);
 
 		img {
-			border: 3px solid #000;
-			border-radius: 30px;
 			margin-bottom: 19px;
 			transition: 0.3s;
 			width: 100%;
@@ -173,30 +219,24 @@
 		img:hover {
 			background: #1e2242;
 		}
-
-		span {
-			font-weight: 700;
-			font-size: 20px;
-		}
 	}
 
 	&-sneak {
-		@include grid-template-gap(4, 24px);
-
-		margin-top: 44px;
+		margin-top: -70px;
+		@include grid-template-gap(3, 30px);
 
 		&__column {
 			width: 100%;
 
 			img {
-				margin-bottom: 24px;
+				margin-bottom: 30px;
 				width: 100%;
 				object-fit: cover;
 			}
 		}
 
 		&__column:nth-child(even) {
-			padding-top: 50px;
+			padding-top: 0px;
 		}
 	}
 }
@@ -207,6 +247,7 @@
 		aspect-ratio: 29/10;
 		display: flex;
 		justify-content: space-between;
+		margin-top: -50px;
 
 		img {
 			height: 100%;
@@ -277,7 +318,7 @@
 
 .art {
 	&__grid {
-		@include grid-template-gap(3, 16px);
+		@include grid-template-gap(2, 30px);
 
 		img {
 			width: 100%;
@@ -288,12 +329,8 @@
 			grid-column: span 2;
 		}
 
-		.col-1 div {
-			@include grid-template-gap(2, 16px);
-		}
-
 		.col-2 {
-			@include grid-template-gap(2, 16px);
+			@include grid-template-gap(2, 30px);
 
 			grid-column: span 2;
 
@@ -340,6 +377,7 @@
 		font-size: 14px;
 	}
 }
+
 /* Media query for screens up to 768px (smartphones) */
 @media screen and (max-width: 768px) {
 	.header__project {
@@ -370,16 +408,8 @@
 					h5 {
 						font-size: 20px;
 					}
+					
 				}
-			}
-
-			.social__desc {
-				margin: 0;
-				font-size: 16px;
-			}
-
-			&--left .talent p {
-				font-size: 16px;
 			}
 		}
 
@@ -404,17 +434,6 @@
 		@include grid-template-gap(2, 18px);
 	}
 
-	.container.container__color {
-		padding-top: 0;
-
-		.circle {
-			width: 60px;
-		}
-
-		.text {
-			font-size: 14px;
-		}
-	}
 
 	.nft {
 		&-about {
@@ -433,7 +452,8 @@
 		}
 
 		&-chippies {
-			@include grid-template-gap(3, 14px);
+			margin-bottom: -50px;
+			@include grid-template-gap(3, 17px);
 
 			.chippy {
 				display: flex;
@@ -443,14 +463,25 @@
 					display: none;
 				}
 			}
+			
 		}
 
 		&-sneak {
-			@include grid-template-gap(2, 17px);
+			margin-top: -50px;
+			@include grid-template-gap(3, 17px);
+
+			&__column {
+				width: 100%;
+	
+				img {
+					margin-bottom: 18px;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
 
 			&__column:nth-child(even) {
 				padding-top: 0px;
-				transform: translateY(-20px);
 			}
 		}
 	}
@@ -498,8 +529,23 @@
 			img {
 				margin-bottom: 18px;
 			}
-			.row__image--2 {
-				@include grid-template-gap(2, 18px);
+		}
+	}
+
+	.blender {
+		&__grid {
+			display: block;
+			img {
+				margin-bottom: 18px;
+			}
+		}
+	}
+
+	.cookbook {
+		&__pic {
+			display: block;
+			img {
+				margin-bottom: 18px;
 			}
 		}
 	}

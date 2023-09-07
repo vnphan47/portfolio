@@ -19,16 +19,13 @@ export const NftArtist = () => {
 
 	const chippies = [
 		{
-			src: '/images/nft/Twitter Chippies.png',
-			title: 'Twitter',
+			src: '/images/nft/0(1) Twitter.png',
 		},
 		{
-			src: '/images/nft/ME Chippies(with fur).png',
-			title: 'Magic Eden',
+			src: '/images/nft/7 ME.png',
 		},
 		{
-			src: '/images/nft/Discord Chippies(with fur).png',
-			title: 'Discord',
+			src: '/images/nft/16 Discord.png',
 		},
 	];
 
@@ -54,7 +51,8 @@ export const NftArtist = () => {
 	};
 
 	const _renderSneaks = () => {
-		const columns = chunkArray(sneaks, width > 768 ? 5 : 10);
+		const columns = chunkArray(sneaks, width > 768 ? 3 : 6);
+		const column = chunkArray(sneaks, width <= 768 ? 2 : 10);
 
 		return columns.map((column, indexCol) => (
 			<div key={indexCol.toString()} className='nft-sneak__column'>
@@ -79,7 +77,7 @@ export const NftArtist = () => {
 						window.open('https://magiceden.io/marketplace/chippies_nft', '_blank')
 					}
 				/>
-				<ButtonP text='sneak peak' onClick={() => refSneak.current.scrollIntoView()} />
+
 			</div>
 		);
 	};
@@ -88,40 +86,21 @@ export const NftArtist = () => {
 		<div className='nft'>
 			<ProjectHeader
 				heading='FREELANCE NFT ARTIST'
-				description='Co-Founded and led the art team of an NFT Collection on Solana Blockchain from pre-money valuation to post-money valuation '
+				description='The project attracted 5000 SOL trading volume in the first month ($1M at
+					SOL all-time-high-price) and collaborated with multiple famous NFT
+					Projects/DAOs (DeGods, SAC, Solana Yacht Club, etc.) '
 				footer={_renderButton()}
 			/>
 
-			<LineDots />
 
 			<div className='nft-about container'>
-				<div className='row__first'>
-					<div className='nft-about__left'>
-						<TitleBox title='about' boxColor='#565B87' boxWidth='100px' />
-						<p className='nft-about__left--desc'>
-							The project attracted 5000 SOL trading volume in the first month ($1M at
-							SOL all-time-high-price) and collaborated with multiple famous NFT
-							Projects/DAOs (DeGods, SAC, Solana Yacht Club, etc.)
-							<br />
-							<br />I worked with cross-functional team that consists of crypto gurus,
-							entrepreneurs, elite AI students, and 5 developers working for major
-							tech companies.
-						</p>
-					</div>
-					<div className='nft-about__right'>
-						<img className='image--full' src='/images/nft/Group 20.png' alt='Group' />
-					</div>
-				</div>
 				<div className='nft-chippies'>{_renderChippies()}</div>
 			</div>
-			<LineDots />
 			<div ref={refSneak}></div>
 			<div className='container'>
-				<TitleBox title='sneak peak' boxColor='#565B87' boxWidth='100px' />
 				<div className='nft-sneak'>{_renderSneaks()}</div>
 			</div>
 
-			<LineDots />
 			<LetConnect />
 		</div>
 	);

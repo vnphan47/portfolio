@@ -1,6 +1,5 @@
 import React from 'react';
 import { ProjectHeader } from './ProjectHeader';
-import { LineDots } from '../../ components/LineDots';
 import { LetConnect } from '../portfolio/LetConnect';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
@@ -12,12 +11,12 @@ export const TalkShow = () => {
 			<div className='talkshow__second--right'>
 				<img
 					className='image--full'
-					src='/images/talkshow/ve_mat_truoc.png'
+					src='/images/talkshow/VeTruoc.png'
 					alt='ve_mat_truoc'
 				/>
 				<img
 					className='image--full'
-					src='/images/talkshow/ve_mat_sau.png'
+					src='/images/talkshow/VeSau.png'
 					alt='ve_mat_sau'
 				/>
 			</div>
@@ -26,7 +25,6 @@ export const TalkShow = () => {
 	return (
 		<div className='talkshow'>
 			<ProjectHeader heading='TALKSHOW “ABOUT ME”' />
-			<LineDots />
 
 			<div className='container'>
 				<div className='talkshow__first'>
@@ -35,7 +33,6 @@ export const TalkShow = () => {
 				</div>
 			</div>
 
-			<LineDots />
 
 			<div className='container'>
 				<div className='talkshow__second'>
@@ -65,7 +62,6 @@ export const TalkShow = () => {
 				</div>
 			</div>
 
-			<LineDots />
 
 			<div className='container'>
 				<div className='talkshow__third'>
@@ -76,7 +72,6 @@ export const TalkShow = () => {
 				</div>
 			</div>
 
-			<LineDots />
 			<LetConnect />
 		</div>
 	);

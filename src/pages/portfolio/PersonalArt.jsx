@@ -13,7 +13,7 @@ export const PersonalArt = () => {
 				<div className='personal__desc--first'>Hi there,</div>
 				<div className='personal__desc--second'>
 					I’m <span>Vy Phan</span>, a freelance illustrator and graphic designer based in
-					Massachusetts.
+					the United States.
 				</div>
 			</div>
 		</div>

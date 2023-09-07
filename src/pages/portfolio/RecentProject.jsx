@@ -8,13 +8,25 @@ export const RecentProject = () => {
 		{
 			src: '/images/main/NFT.png',
 			title: 'FREELANCE NFT ARTIST',
-			hover: '/images/main/Property 1=hover2.png',
+			hover: '/images/main/NFT hover.png',
 			path: '/nft',
+		},
+		{
+			src: '/images/main/3D Art.png',
+			title: 'BLENDER 3D ART',
+			hover: '/images/main/3D Art hover.png',
+			path: '/blender',
+		},
+		{
+			src: '/images/main/Coloring Book.png',
+			title: 'COLOR, COOK, & EAT',
+			hover: '/images/main/Coloring Book hover.png',
+			path: '/cookbook',
 		},
 		{
 			src: '/images/main/VGT.png',
 			title: 'VEGGIES GOT TALENT!',
-			hover: '/images/main/Property 1=hover-1.png',
+			hover: '/images/main/VGT hover.png',
 			path: '/veggies',
 		},
 		{
