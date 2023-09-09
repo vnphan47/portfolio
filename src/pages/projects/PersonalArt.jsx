@@ -42,10 +42,11 @@ export const PersonalArt = () => {
 	return (
 		<div className='art'>
 			<ProjectHeader heading='PERSONAL ART' />
+			<LineDots />
 			<div className='container'>
 				<div className='art__grid'>{_renderImages()}</div>
 			</div>
-
+<LineDots />
 			<LetConnect />
 		</div>
 	);

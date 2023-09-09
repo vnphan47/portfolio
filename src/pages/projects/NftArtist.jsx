@@ -10,6 +10,7 @@ import { useWindowSize } from '../../hooks/useWindowSize';
 export const NftArtist = () => {
 	const { width } = useWindowSize();
 	const [sneaks, setSneaks] = useState([]);
+	const [attributes, setAttributes] = useState([]);
 
 	const refSneak = useRef(null);
 
@@ -20,12 +21,15 @@ export const NftArtist = () => {
 	const chippies = [
 		{
 			src: '/images/nft/0(1) Twitter.png',
+			title: 'Twitter',
 		},
 		{
 			src: '/images/nft/7 ME.png',
+			title: 'Magic Eden',
 		},
 		{
 			src: '/images/nft/16 Discord.png',
+			title: 'Discord',
 		},
 	];
 
@@ -50,12 +54,29 @@ export const NftArtist = () => {
 		});
 	};
 
+
 	const _renderSneaks = () => {
-		const columns = chunkArray(sneaks, width > 768 ? 3 : 6);
-		const column = chunkArray(sneaks, width <= 768 ? 2 : 10);
+		const columns = chunkArray(sneaks, width > 768 ? 1 : 1);
 
 		return columns.map((column, indexCol) => (
 			<div key={indexCol.toString()} className='nft-sneak__column'>
+				{column.map((item, index) => (
+					<img
+						className='image--full'
+						src={item}
+						key={index.toString()}
+						alt={index.toString()}
+					/>
+				))}
+			</div>
+		));
+	};
+
+	const _renderAttributes = () => {
+		const columns = chunkArray(attributes, width > 768 ? 3 : 9);
+
+		return columns.map((column, indexCol) => (
+			<div key={indexCol.toString()} className='nft-attributes__column'>
 				{column.map((item, index) => (
 					<img
 						className='image--full'
@@ -77,7 +98,7 @@ export const NftArtist = () => {
 						window.open('https://magiceden.io/marketplace/chippies_nft', '_blank')
 					}
 				/>
-
+				<ButtonP text='sneak peak' onClick={() => refSneak.current.scrollIntoView()} />
 			</div>
 		);
 	};
@@ -86,21 +107,40 @@ export const NftArtist = () => {
 		<div className='nft'>
 			<ProjectHeader
 				heading='FREELANCE NFT ARTIST'
-				description='The project attracted 5000 SOL trading volume in the first month ($1M at
-					SOL all-time-high-price) and collaborated with multiple famous NFT
-					Projects/DAOs (DeGods, SAC, Solana Yacht Club, etc.) '
+				description='Co-Founded and led the art team of an NFT Collection on Solana Blockchain from pre-money valuation to post-money valuation '
 				footer={_renderButton()}
 			/>
 
+			<LineDots />
 
 			<div className='nft-about container'>
+				<div className='row__first'>
+					<div className='nft-about__left'>
+						<TitleBox title='about' boxColor='#565B87' boxWidth='100px' />
+						<p className='nft-about__left--desc'>
+							The project attracted 5000 SOL trading volume in the first month ($1M at
+							SOL all-time-high-price) and collaborated with multiple famous NFT
+							Projects/DAOs (DeGods, SAC, Solana Yacht Club, etc.)
+							<br />
+							<br />I worked with cross-functional team that consists of crypto gurus,
+							entrepreneurs, elite AI students, and 5 developers working for major
+							tech companies.
+						</p>
+					</div>
+					<div className='nft-about__right'>
+						<img className='image--full' src='/images/nft/ChippiesLogo.png' alt='chippieslogo' />
+					</div>
+				</div>
 				<div className='nft-chippies'>{_renderChippies()}</div>
 			</div>
+			<LineDots />
 			<div ref={refSneak}></div>
 			<div className='container'>
+				<TitleBox title='sneak peak' boxColor='#565B87' boxWidth='100px' />
 				<div className='nft-sneak'>{_renderSneaks()}</div>
 			</div>
 
+			<LineDots />
 			<LetConnect />
 		</div>
 	);

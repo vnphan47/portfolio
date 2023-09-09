@@ -35,10 +35,11 @@ export const BlenderPage = () => {
 	return (
 		<div className='blender'>
 			<ProjectHeader heading='BLENDER 3D ART' />
+			<LineDots />
 			<div className='container'>
 				<div className='blender__grid'>{_renderImages()}</div>
 			</div>
-
+			<LineDots />
 			<LetConnect />
 		</div>
 	);

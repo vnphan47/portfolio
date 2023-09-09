@@ -1,5 +1,7 @@
 import React from 'react';
 import { ProjectHeader } from './ProjectHeader';
+import { LineDots } from '../../ components/LineDots';
+import { TitleBox } from '../../ components/TitleBox';
 import { LetConnect } from '../portfolio/LetConnect';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
@@ -25,6 +27,7 @@ export const TalkShow = () => {
 	return (
 		<div className='talkshow'>
 			<ProjectHeader heading='TALKSHOW “ABOUT ME”' />
+			<LineDots />
 
 			<div className='container'>
 				<div className='talkshow__first'>
@@ -33,10 +36,15 @@ export const TalkShow = () => {
 				</div>
 			</div>
 
+			<LineDots />
+
 
 			<div className='container'>
 				<div className='talkshow__second'>
 					<div className='talkshow__second--left'>
+					<TitleBox title='about' boxColor='#f9c5c9' boxWidth='100px' />
+					<br />
+					<br />
 						<p>
 							<span>Talkshow "About me"</span> is an offline event that 7MINE held in
 							Hanoi, Vietnam for not only the LGBT+ community but also for people who
@@ -62,16 +70,17 @@ export const TalkShow = () => {
 				</div>
 			</div>
 
-
+<LineDots />
 			<div className='container'>
 				<div className='talkshow__third'>
+				<TitleBox title='photos' boxColor='#f9c5c9' boxWidth='100px' />
 					<img className='img-full' src='/images/talkshow/pic1 1.png' alt='' />
 					<img className='' src='/images/talkshow/pic2 1.png' alt='' />
 					<img className='' src='/images/talkshow/pic3 1.png' alt='' />
 					<img className='img-full' src='/images/talkshow/pic4 1.png' alt='' />
 				</div>
 			</div>
-
+			<LineDots />
 			<LetConnect />
 		</div>
 	);

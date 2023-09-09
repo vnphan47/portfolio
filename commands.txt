@@ -10,3 +10,13 @@ commit va save code o github:
 
 cd /Users/vyphan/Documents/portfolio
 
+git add .
+
+git commit -m "update"
+
+git push
+
+password la token
+
+
+sau khi update thi qua vercel deploy
