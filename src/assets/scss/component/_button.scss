@@ -33,6 +33,21 @@
 	box-shadow: 0 8px 0 #000, 0 -8px 0 #000;
 }
 
+.btn-flat {
+	border: 2px solid $text-black;
+	padding: 20px;
+	width: fit-content;
+	cursor: pointer;
+	transition: 0.3s ease-out;
+
+	&:hover,
+	&.active {
+		background-color: #333333;
+		color: #fff;
+		transition: 0.3s ease-in;
+	}
+}
+
 // @media screen and (max-width: 1025px) {
 // }
 

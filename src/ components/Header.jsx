@@ -3,6 +3,7 @@ import { defaultRouter } from '../routes';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import { useWindowSize } from '../hooks/useWindowSize';
+import IconMail from '../icons/IconMail';
 
 export const Header = () => {
 	const location = useLocation();
@@ -68,7 +69,7 @@ export const Header = () => {
 			<div>
 				<img
 					className='logo'
-					src='/images/main/Logo.png'
+					src='/images/main/logo_vyphan.png'
 					alt='log'
 					onClick={() => navigate('/')}
 				/>
@@ -96,8 +97,9 @@ export const Header = () => {
 						);
 					})}
 
-					<div className='nav__link' onClick={_handleClickContact}>
-						Contact
+					<div className='nav__link box btn-flat' onClick={_handleClickContact}>
+						<span>Let’s Connect</span>
+						<IconMail />
 					</div>
 				</div>
 			</div>

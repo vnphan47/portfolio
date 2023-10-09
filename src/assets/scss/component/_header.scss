@@ -13,24 +13,41 @@
 	.nav {
 		display: flex;
 		justify-content: flex-end;
+		align-items: center;
 		gap: 30px;
 
 		&__link {
-			font-size: 16px;
 			cursor: pointer;
-			text-transform: uppercase;
 			color: $text-black;
 			text-decoration: none;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 19px;
+			letter-spacing: 0em;
+			text-align: center;
+
+			&.box {
+				border: 1.5px;
+				border: 1.5px solid $text-black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 8px;
+				p {
+					line-height: 21px;
+				}
+			}
 		}
 
 		.--active {
-			font-weight: bold;
-			color: $text-pink;
+			font-weight: 700;
 		}
 
-		&__link:hover {
-			font-weight: bold;
-			color: $text-pink;
+		&__link.box:hover {
+			color: #fff;
+			svg {
+				color: #fff !important;
+			}
 		}
 	}
 }

@@ -1,5 +1,4 @@
 import { AboutPage } from '../pages/about';
-import { ContactPage } from '../pages/contact';
 import { Portfolio } from '../pages/portfolio';
 import { NftArtist } from '../pages/projects/NftArtist';
 import { PersonalArt } from '../pages/projects/PersonalArt';
@@ -7,10 +6,19 @@ import { TalkShow } from '../pages/projects/TalkShow';
 import { VeggiesPage } from '../pages/projects/VeggiesPage';
 import { BlenderPage } from '../pages/projects/BlenderPage';
 import { CookBook } from '../pages/projects/CookBook';
+import HomePage from '../pages/home';
 
 export const defaultRouter = [
 	{
 		path: '/',
+		component: <HomePage />,
+		exact: true,
+		icon: null,
+		title: 'Home',
+		isNavlink: true,
+	},
+	{
+		path: '/portfolio',
 		component: <Portfolio />,
 		exact: true,
 		icon: null,
@@ -23,7 +31,7 @@ export const defaultRouter = [
 		exact: true,
 		icon: null,
 		title: 'About',
-		isNavlink: true,
+		isNavlink: false,
 	},
 	{
 		path: '/veggies',

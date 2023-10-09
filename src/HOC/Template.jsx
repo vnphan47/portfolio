@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Header } from '../ components/Header';
+import Footer from '../ components/Footer';
 
 export const Template = ({ children }) => {
 	const location = useLocation();
@@ -13,6 +14,7 @@ export const Template = ({ children }) => {
 		<Fragment>
 			<Header />
 			{children}
+			<Footer />
 		</Fragment>
 	);
 };
