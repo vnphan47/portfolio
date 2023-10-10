@@ -1,5 +1,4 @@
 import { AboutPage } from '../pages/about';
-import { Portfolio } from '../pages/portfolio';
 import { NftArtist } from '../pages/projects/NftArtist';
 import { PersonalArt } from '../pages/projects/PersonalArt';
 import { TalkShow } from '../pages/projects/TalkShow';
@@ -7,6 +6,7 @@ import { VeggiesPage } from '../pages/projects/VeggiesPage';
 import { BlenderPage } from '../pages/projects/BlenderPage';
 import { CookBook } from '../pages/projects/CookBook';
 import HomePage from '../pages/home';
+import Portfolio from '../pages/newPortfolio';
 
 export const defaultRouter = [
 	{
