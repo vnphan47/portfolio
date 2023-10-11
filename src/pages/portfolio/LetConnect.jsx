@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
+import IconSocial from '../../icons/IconSocial';
 
 export const LetConnect = ({ isNotShowDesignedBy = false, isShowOnlyDesignedBy = false }) => {
-	const _handleClickSocial = (url) => {
-		window.open(url, '_blank');
-	};
 	const _renderContent = () => {
 		if (isShowOnlyDesignedBy) return null;
 
@@ -17,18 +15,7 @@ export const LetConnect = ({ isNotShowDesignedBy = false, isShowOnlyDesignedBy =
 				<a className='letconnect__mail' href='mailto:syrenaphan47@gmail.com'>
 					syrenaphan47@gmail.com
 				</a>
-				<div className='letconnect__social'>
-					<img
-						src='/images/main/ball.png'
-						alt='ball'
-						onClick={() => _handleClickSocial('https://dribbble.com/pn_lanvyy')}
-					/>
-					<img
-						src='/images/main/ins.png'
-						alt='ins'
-						onClick={() => _handleClickSocial('https://www.instagram.com/pn_lanvyy/')}
-					/>
-				</div>
+				<ListSocial />
 			</Fragment>
 		);
 	};
@@ -48,5 +35,36 @@ export const LetConnect = ({ isNotShowDesignedBy = false, isShowOnlyDesignedBy =
 			{_renderContent()}
 			{_renderDesignedBy()}
 		</div>
+	);
+};
+
+export const ListSocial = () => {
+	const _handleClickSocial = (url) => {
+		window.location.href = url;
+	};
+
+	return (
+		<Fragment>
+			<div className='letconnect__social'>
+				<div
+					className='letconnect__social--item'
+					onClick={() => _handleClickSocial('https://dribbble.com/pn_lanvyy')}
+				>
+					<IconSocial isDribble />
+				</div>
+				<div
+					className='letconnect__social--item'
+					onClick={() => _handleClickSocial('https://www.instagram.com/pn_lanvyy/')}
+				>
+					<IconSocial />
+				</div>
+				<div
+					className='letconnect__social--item'
+					onClick={() => _handleClickSocial('https://www.behance.net/vyphannn')}
+				>
+					<IconSocial isBe />
+				</div>
+			</div>
+		</Fragment>
 	);
 };

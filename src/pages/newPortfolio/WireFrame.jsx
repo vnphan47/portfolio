@@ -1,7 +1,10 @@
 import React from 'react';
 import TitlePortfolio from './TitlePortfolio';
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 const WireFrame = () => {
+	const { width } = useWindowSize();
+
 	return (
 		<div className='wireframe'>
 			<div className='container'>
@@ -12,7 +15,10 @@ const WireFrame = () => {
 					design's aesthetics and functionality before moving on to the actual development
 					phase
 				</p>
-				<img src='/images/newPortfolio/Wireframe.png' alt='Wireframe' />
+				<img
+					src={`/images/newPortfolio/Wireframe${width <= 768 ? '2' : ''}.png`}
+					alt='Wireframe'
+				/>
 			</div>
 		</div>
 	);

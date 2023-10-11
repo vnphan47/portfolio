@@ -80,6 +80,15 @@
 				transform: unset;
 			}
 		}
+
+		.letconnect__social {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			margin: 0;
+			flex-direction: column;
+			gap: 20px;
+		}
 	}
 	.img-ellipse {
 		position: absolute;
@@ -115,6 +124,11 @@
 		max-width: 1138px;
 		margin-inline: auto;
 		padding-bottom: 95px;
+
+		@include mobile-l {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
 	}
 	&__item {
 		background: #e9e9ea;

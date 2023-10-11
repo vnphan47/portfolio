@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { defaultRouter } from '../routes';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
@@ -60,7 +60,7 @@ export const Header = () => {
 	};
 
 	const _handleClickContact = () => {
-		window.location.href = `mailto:sdsd@gmail.com`;
+		window.location.href = `mailto:syrenaphan47@gmail.com`;
 		_handleCloseMenu();
 	};
 
@@ -76,7 +76,16 @@ export const Header = () => {
 			</div>
 			<div className='menu-wrapper'>
 				{width <= 768 && (
-					<div ref={refButton} className='menu-toggle' onClick={_handleClickMenu}></div>
+					<div className='wrap-toggle'>
+						<div className='mail' onClick={_handleClickContact}>
+							<IconMail />
+						</div>
+						<div
+							ref={refButton}
+							className='menu-toggle'
+							onClick={_handleClickMenu}
+						></div>
+					</div>
 				)}
 
 				<div ref={refDropdown} className={classNames('nav', { active: visible })}>
@@ -97,10 +106,12 @@ export const Header = () => {
 						);
 					})}
 
-					<div className='nav__link box btn-flat' onClick={_handleClickContact}>
-						<span>Let’s Connect</span>
-						<IconMail />
-					</div>
+					{width > 768 && (
+						<div className='nav__link box btn-flat' onClick={_handleClickContact}>
+							<span>Let’s Connect</span>
+							<IconMail />
+						</div>
+					)}
 				</div>
 			</div>
 		</div>

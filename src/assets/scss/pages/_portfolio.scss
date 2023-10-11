@@ -109,6 +109,16 @@
 		margin: 10px auto 30px;
 		flex-wrap: nowrap;
 		cursor: pointer;
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+		&--item {
+			font-size: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 
 	&__designed a {

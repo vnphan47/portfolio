@@ -15,6 +15,7 @@ export const LIST_UI_PORTFOLIO = [
 		title: 'ROBOS | NFTs Analysis Dashboard Design',
 		sub: 'UX/UI Case Study',
 		img: '/images/main/ROBOS Display.png',
+		path: 'portfolio',
 	},
 	{
 		id: 2,

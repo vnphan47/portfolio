@@ -71,6 +71,17 @@
 	flex-direction: row-reverse;
 }
 
+.wrap-toggle {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	.mail {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
 @media screen and (max-width: 1025px) {
 	.header {
 		margin: 24px;

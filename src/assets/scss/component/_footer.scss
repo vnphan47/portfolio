@@ -2,4 +2,22 @@
 	background-color: #333333;
 	padding: 30px 105px;
 	color: #fff;
+	@include tablet {
+		padding: 30px;
+	}
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+
+		@include mobile {
+			flex-direction: column-reverse;
+		}
+
+		.letconnect__social {
+			margin: 0;
+		}
+	}
 }

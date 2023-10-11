@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
+import { ListSocial } from '../portfolio/LetConnect';
 
 const Introduce = () => {
+	const navigate = useNavigate();
 	return (
 		<div className='wrapper introduce'>
 			<div className='container'>
@@ -11,10 +14,16 @@ const Introduce = () => {
 						transforming ideas into visual masterpieces! Currently based in
 						Massachusetts, USA.
 					</p>
-					<div className='introduce__left--btn btn-flat'>Portfolio</div>
+					<div
+						className='introduce__left--btn btn-flat'
+						onClick={() => navigate('/portfolio')}
+					>
+						Portfolio
+					</div>
 				</div>
 				<div className='introduce__right' data-aos='fade-left' data-aos-duration='1500'>
 					<img src='/images/main/profile pic 1.png' alt='vyphan' className='img-vyphan' />
+					<ListSocial />
 				</div>
 			</div>
 			<img src='/images/main/Ellipse_1.png' alt='ellipse' className='img-ellipse' />
