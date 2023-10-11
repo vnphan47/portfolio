@@ -60,7 +60,7 @@ export const Header = () => {
 	};
 
 	const _handleClickContact = () => {
-		document.querySelector('.letconnect').scrollIntoView();
+		window.location.href = `mailto:sdsd@gmail.com`;
 		_handleCloseMenu();
 	};
 

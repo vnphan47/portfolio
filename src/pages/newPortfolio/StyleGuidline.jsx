@@ -6,16 +6,18 @@ const StyleGuidline = () => {
 		<div className='styleGuid'>
 			<div className='container'>
 				<TitlePortfolio number={'06'} title={'Style Guidline'} />
-				<p className='styleGuild__desc'>
+				<p className='styleGuid__desc'>
 					The combination of these colors provide a modern, neutral aesthetic that is
 					commonly seen in technology-related products and services.
 				</p>
 			</div>
 			<div className='styleGuid__middle'>
-				<div className='grid container'>
-					<div className='styleGuid__middle--left'>
-						<h4 className='styleGuid__title'>Color</h4>
-						<img src='/images/newPortfolio/telephone.png' alt='telephone' />
+				<div className='grid '>
+					<div className='wrap-bg'>
+						<div className='styleGuid__middle--left'>
+							<h4 className='styleGuid__title'>Color</h4>
+							<img src='/images/newPortfolio/telephone.png' alt='telephone' />
+						</div>
 					</div>
 					<div className='styleGuid__middle--right'>
 						<h4 className='styleGuid__title'>Typography</h4>
@@ -34,7 +36,6 @@ const StyleGuidline = () => {
 						</div>
 					</div>
 				</div>
-				<div className='bg__middle'></div>
 			</div>
 			<div className='container iconGraphy'>
 				<h4 className='styleGuid__title'>Icongraphy</h4>

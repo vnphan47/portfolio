@@ -16,9 +16,13 @@ const Banner = () => {
 					className='banner__laptop'
 				/>
 				<div className='banner__quotes'>
-					<IconQuotes />
+					<div className='wrap-quotes'>
+						<IconQuotes />
+					</div>
 					<h2>A Sentimental Analysis Dashboard for NFT Traders</h2>
-					<IconQuotes isRight />
+					<div className='wrap-quotes right'>
+						<IconQuotes isRight />
+					</div>
 				</div>
 			</div>
 			<div className='wrap-color' />

@@ -15,6 +15,8 @@ const PortfolioHomePage = () => {
 								key={id}
 								className='item'
 								style={{ backgroundImage: `url("${img}")` }}
+								data-aos='fade-zoom-in'
+								data-aos-duration='1000'
 							>
 								<div className='item__text'>
 									<h4 className='item__text--title'>{title}</h4>
@@ -33,6 +35,8 @@ const PortfolioHomePage = () => {
 								key={id}
 								className='item'
 								style={{ backgroundImage: `url("${src}")` }}
+								data-aos='fade-zoom-in'
+								data-aos-duration='1000'
 							>
 								<div className='item__text'>
 									<h4 className='item__text--title'>{title}</h4>
