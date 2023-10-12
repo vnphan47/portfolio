@@ -65,53 +65,55 @@ export const Header = () => {
 	};
 
 	return (
-		<div className='header'>
-			<div>
-				<img
-					className='logo'
-					src='/images/main/logo_vyphan.png'
-					alt='log'
-					onClick={() => navigate('/')}
-				/>
-			</div>
-			<div className='menu-wrapper'>
-				{width <= 768 && (
-					<div className='wrap-toggle'>
-						<div className='mail' onClick={_handleClickContact}>
-							<IconMail />
-						</div>
-						<div
-							ref={refButton}
-							className='menu-toggle'
-							onClick={_handleClickMenu}
-						></div>
-					</div>
-				)}
-
-				<div ref={refDropdown} className={classNames('nav', { active: visible })}>
-					{defaultRouter.map((item) => {
-						if (!item.isNavlink) return null;
-
-						return (
-							<Link
-								key={item.path}
-								to={item.path}
-								className={classNames('nav__link', {
-									'--active': location.pathname === item.path,
-								})}
-								onClick={_handleCloseMenu}
-							>
-								{item.title}
-							</Link>
-						);
-					})}
-
-					{width > 768 && (
-						<div className='nav__link box btn-flat' onClick={_handleClickContact}>
-							<span>Let’s Connect</span>
-							<IconMail />
+		<div className=' wrapper'>
+			<div className='header'>
+				<div>
+					<img
+						className='logo'
+						src='/images/main/logo_vyphan.png'
+						alt='log'
+						onClick={() => navigate('/')}
+					/>
+				</div>
+				<div className='menu-wrapper'>
+					{width <= 768 && (
+						<div className='wrap-toggle'>
+							<div className='mail' onClick={_handleClickContact}>
+								<IconMail />
+							</div>
+							<div
+								ref={refButton}
+								className='menu-toggle'
+								onClick={_handleClickMenu}
+							></div>
 						</div>
 					)}
+
+					<div ref={refDropdown} className={classNames('nav', { active: visible })}>
+						{defaultRouter.map((item) => {
+							if (!item.isNavlink) return null;
+
+							return (
+								<Link
+									key={item.path}
+									to={item.path}
+									className={classNames('nav__link', {
+										'--active': location.pathname === item.path,
+									})}
+									onClick={_handleCloseMenu}
+								>
+									{item.title}
+								</Link>
+							);
+						})}
+
+						{width > 768 && (
+							<div className='nav__link box btn-flat' onClick={_handleClickContact}>
+								<span>Let’s Connect</span>
+								<IconMail />
+							</div>
+						)}
+					</div>
 				</div>
 			</div>
 		</div>

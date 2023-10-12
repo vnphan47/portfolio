@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import TitlePortfolio from './TitlePortfolio';
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 const VisualDesign = () => {
+	const { width } = useWindowSize();
+
+	const isDesktop = width > 1024;
+
+	const _renderUpcoming = () => {
+		return (
+			<Fragment>
+				<h4 className='box__text--title'>Upcoming Launches</h4>
+				<p className='box__text--desc'>
+					A central hub for users to stay informed about what's on the horizon and plan
+					their engagement accordingly
+				</p>
+			</Fragment>
+		);
+	};
 	return (
 		<div className='visual'>
 			<div className='container'>
@@ -29,28 +45,33 @@ const VisualDesign = () => {
 						</p>
 					</div>
 				</div>
-				<div className='box'>
+				<div className='box upcoming'>
+					{!isDesktop && _renderUpcoming()}
+
 					<div className='box__img '>
 						<div className='wrap-arrow'>
-							<img src='/images/newPortfolio/launches1.png' alt='' />
 							<img
-								src='/images/newPortfolio/Vector 25.png'
+								src={`/images/newPortfolio/${
+									isDesktop ? 'launches1' : 'upcoming2'
+								}.png`}
 								alt=''
-								className='arrow'
 							/>
 							<img
 								src='/images/newPortfolio/Vector 25.png'
 								alt=''
 								className='arrow'
+								hidden={!isDesktop}
+							/>
+							<img
+								src='/images/newPortfolio/Vector 25.png'
+								alt=''
+								className='arrow'
+								hidden={!isDesktop}
 							/>
 						</div>
 					</div>
 					<div className='box__text'>
-						<h4 className='box__text--title'>Upcoming Launches</h4>
-						<p className='box__text--desc'>
-							A central hub for users to stay informed about what's on the horizon and
-							plan their engagement accordingly
-						</p>
+						{isDesktop && _renderUpcoming()}
 						<p className='box__text--desc'>
 							Each NFT Collection will have a specific sentiment (
 							<span className='green'>Positive</span>,{' '}
@@ -80,8 +101,10 @@ const VisualDesign = () => {
 						</p>
 					</div>
 				</div>
-				<div className='box__text'>
-					<h4 className='box__text--title'>More Screens</h4>
+				<div className='box'>
+					<div className='box__text'>
+						<h4 className='box__text--title'>More Screens</h4>
+					</div>
 				</div>
 			</div>
 			<img

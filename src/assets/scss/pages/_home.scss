@@ -130,6 +130,9 @@
 		margin-inline: auto;
 		padding-bottom: 95px;
 
+		@include tablet {
+			margin-inline: 20px;
+		}
 		@include mobile-l {
 			flex-wrap: wrap;
 			gap: 20px;
@@ -138,6 +141,18 @@
 	&__item {
 		background: #e9e9ea;
 		margin: 0 14px;
+		width: 30%;
+
+		@include tablet {
+			max-width: 280px;
+			div:has(.partnering__item) {
+				height: 100%;
+			}
+
+			.slick-slide > div {
+				height: 100%;
+			}
+		}
 
 		svg {
 			margin: 60px auto 50px;
@@ -156,7 +171,12 @@
 			letter-spacing: 0em;
 			text-align: center;
 			margin: 20px auto 40px;
+			padding-inline: 10px;
 		}
+	}
+
+	.slick-list {
+		height: 400px;
 	}
 }
 
