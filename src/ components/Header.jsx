@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { defaultRouter } from '../routes';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import { useWindowSize } from '../hooks/useWindowSize';
+import IconMail from '../icons/IconMail';
 
 export const Header = () => {
 	const location = useLocation();
@@ -59,45 +60,59 @@ export const Header = () => {
 	};
 
 	const _handleClickContact = () => {
-		document.querySelector('.letconnect').scrollIntoView();
+		window.location.href = `mailto:syrenaphan47@gmail.com`;
 		_handleCloseMenu();
 	};
 
 	return (
-		<div className='header'>
-			<div>
-				<img
-					className='logo'
-					src='/images/main/Logo.png'
-					alt='log'
-					onClick={() => navigate('/')}
-				/>
-			</div>
-			<div className='menu-wrapper'>
-				{width <= 768 && (
-					<div ref={refButton} className='menu-toggle' onClick={_handleClickMenu}></div>
-				)}
+		<div className=' wrapper'>
+			<div className='header'>
+				<div>
+					<img
+						className='logo'
+						src='/images/main/logo_vyphan.png'
+						alt='log'
+						onClick={() => navigate('/')}
+					/>
+				</div>
+				<div className='menu-wrapper'>
+					{width <= 768 && (
+						<div className='wrap-toggle'>
+							<div className='mail' onClick={_handleClickContact}>
+								<IconMail />
+							</div>
+							<div
+								ref={refButton}
+								className='menu-toggle'
+								onClick={_handleClickMenu}
+							></div>
+						</div>
+					)}
 
-				<div ref={refDropdown} className={classNames('nav', { active: visible })}>
-					{defaultRouter.map((item) => {
-						if (!item.isNavlink) return null;
+					<div ref={refDropdown} className={classNames('nav', { active: visible })}>
+						{defaultRouter.map((item) => {
+							if (!item.isNavlink) return null;
 
-						return (
-							<Link
-								key={item.path}
-								to={item.path}
-								className={classNames('nav__link', {
-									'--active': location.pathname === item.path,
-								})}
-								onClick={_handleCloseMenu}
-							>
-								{item.title}
-							</Link>
-						);
-					})}
+							return (
+								<Link
+									key={item.path}
+									to={item.path}
+									className={classNames('nav__link', {
+										'--active': location.pathname === item.path,
+									})}
+									onClick={_handleCloseMenu}
+								>
+									{item.title}
+								</Link>
+							);
+						})}
 
-					<div className='nav__link' onClick={_handleClickContact}>
-						Contact
+						{width > 768 && (
+							<div className='nav__link box btn-flat' onClick={_handleClickContact}>
+								<span>Let’s Connect</span>
+								<IconMail />
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
