@@ -2,7 +2,6 @@ import React from 'react';
 import { ProjectHeader } from './ProjectHeader';
 import { LineDots } from '../../ components/LineDots';
 import { TitleBox } from '../../ components/TitleBox';
-import { LetConnect } from '../portfolio/LetConnect';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
 export const VeggiesPage = () => {
@@ -159,7 +158,8 @@ export const VeggiesPage = () => {
 			</div>
 
 			<LineDots />
-			<LetConnect />
+		<br />
+		<br />
 		</div>
 	);
 };

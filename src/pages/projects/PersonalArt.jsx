@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { ProjectHeader } from './ProjectHeader';
 import { LineDots } from '../../ components/LineDots';
-import { LetConnect } from '../portfolio/LetConnect';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
 export const PersonalArt = () => {
@@ -46,8 +45,9 @@ export const PersonalArt = () => {
 			<div className='container'>
 				<div className='art__grid'>{_renderImages()}</div>
 			</div>
-<LineDots />
-			<LetConnect />
+			<LineDots />
+		<br />
+		<br />
 		</div>
 	);
 };

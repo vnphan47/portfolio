@@ -4,7 +4,6 @@ import { ButtonP } from '../../ components/ButtonP';
 import { LineDots } from '../../ components/LineDots';
 import { TitleBox } from '../../ components/TitleBox';
 import { chunkArray } from '../../helpers';
-import { LetConnect } from '../portfolio/LetConnect';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
 export const NftArtist = () => {
@@ -141,7 +140,8 @@ export const NftArtist = () => {
 			</div>
 
 			<LineDots />
-			<LetConnect />
+			<br />
+			<br />
 		</div>
 	);
 };

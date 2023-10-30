@@ -7,8 +7,9 @@ const HomePage = () => {
 	return (
 		<div>
 			<Introduce />
-			<Partnering />
 			<PortfolioHomePage />
+			<Partnering />
+			
 		</div>
 	);
 };

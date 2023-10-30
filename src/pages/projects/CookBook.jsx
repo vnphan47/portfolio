@@ -2,7 +2,6 @@ import React from 'react';
 import { ProjectHeader } from './ProjectHeader';
 import { TitleBox } from '../../ components/TitleBox';
 import { LineDots } from '../../ components/LineDots';
-import { LetConnect } from '../portfolio/LetConnect';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
 export const CookBook = () => {
@@ -15,7 +14,7 @@ export const CookBook = () => {
 				heading='COLOR, COOK, & EAT'
 				description='An activity book combines creativity with nutrition education for kids. '		
 			/>
-            <LineDots />
+                <LineDots />
 
             <div className='cookbook-about container'>
             <div className='row__first'>
@@ -96,7 +95,8 @@ export const CookBook = () => {
                 
             </div>  
             <LineDots />     
-        <LetConnect />
+            <br />
+		    <br />
         </div>
     );
 };

@@ -7,6 +7,7 @@ import { BlenderPage } from '../pages/projects/BlenderPage';
 import { CookBook } from '../pages/projects/CookBook';
 import HomePage from '../pages/home';
 import Portfolio from '../pages/newPortfolio';
+import { FoodPlay }  from '../pages/projects/FoodPlay';
 
 export const defaultRouter = [
 	{
@@ -24,6 +25,14 @@ export const defaultRouter = [
 		icon: null,
 		title: 'Portfolio',
 		isNavlink: true,
+	},
+	{
+		path: '/foodplay',
+		component: <FoodPlay />,
+		exact: true,
+		icon: null,
+		title: 'FoodPlay',
+		isNavlink: false,
 	},
 	{
 		path: '/about',

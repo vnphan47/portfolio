@@ -22,6 +22,7 @@ export const LIST_UI_PORTFOLIO = [
 		title: 'FoodPlay Productions | Landing Page',
 		sub: 'Website Redesign',
 		img: '/images/main/FoodPlay Display.png',
+		path: '/foodplay',
 	},
 ];
 

@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { ProjectHeader } from './ProjectHeader';
 import { LineDots } from '../../ components/LineDots';
-import { LetConnect } from '../portfolio/LetConnect';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
 export const BlenderPage = () => {
@@ -40,7 +39,8 @@ export const BlenderPage = () => {
 				<div className='blender__grid'>{_renderImages()}</div>
 			</div>
 			<LineDots />
-			<LetConnect />
+			<br />
+			<br />
 		</div>
 	);
 };
