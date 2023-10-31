@@ -10,9 +10,7 @@ const Introduce = () => {
 				<div className='introduce__left' data-aos='fade-right' data-aos-duration='1500'>
 					<h1 className='introduce__left--title'>HELLO, I’M VY PHAN</h1>
 					<p className='introduce__left--desc'>
-						As a freelance visual designer with 5+ years of experience, I take pride in
-						transforming ideas into visual masterpieces! Currently based in
-						Massachusetts, USA.
+					As a freelance visual designer and student based in Massachusetts USA, I love working on projects that bring creativity to life and turning ideas into beautiful visuals. 
 					</p>
 
 				</div>
