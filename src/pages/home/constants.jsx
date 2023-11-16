@@ -1,12 +1,13 @@
 export const LIST_BUTTON = [
 	{
-		id: 1,
-		title: 'UX/UI Design',
-	},
-	{
 		id: 2,
 		title: 'Illustration/Graphic',
 	},
+	{
+		id: 1,
+		title: 'UX/UI Design',
+	},
+
 ];
 
 export const LIST_UI_PORTFOLIO = [

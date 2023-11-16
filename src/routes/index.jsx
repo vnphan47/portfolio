@@ -18,14 +18,14 @@ export const defaultRouter = [
 		title: 'Home',
 		isNavlink: true,
 	},
-	{
-		path: '/portfolio',
-		component: <Portfolio />,
-		exact: true,
-		icon: null,
-		title: 'Portfolio',
-		isNavlink: true,
-	},
+	// {
+	// 	path: '/portfolio',
+	// 	component: <Portfolio />,
+	// 	exact: true,
+	// 	icon: null,
+	// 	title: 'Portfolio',
+	// 	isNavlink: true,
+	// },
 	{
 		path: '/foodplay',
 		component: <FoodPlay />,
