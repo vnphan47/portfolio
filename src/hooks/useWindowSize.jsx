@@ -1,21 +1,31 @@
 import { useEffect, useState } from 'react';
+import { WINDOW_SIZE } from './constants';
 
 export const useWindowSize = () => {
-	const [windowSize, setWindowSize] = useState({
-		width: undefined,
-		height: undefined,
-	});
-	useEffect(() => {
-		function handleResize() {
-			setWindowSize({
-				width: window.innerWidth,
-				height: window.innerHeight,
-			});
-		}
+    const calculate = () => {
+        const width = window.innerWidth;
+        return {
+            width,
+            height: window.innerHeight,
+            sm: width < WINDOW_SIZE.MD,
+            md: width >= WINDOW_SIZE.MD,
+            lg: width >= WINDOW_SIZE.LG,
+            xl: width >= WINDOW_SIZE.XL,
+            xxl: width >= WINDOW_SIZE.XXL
+        };
+    };
+    const [windowSize, setWindowSize] = useState(calculate());
 
-		window.addEventListener('resize', handleResize);
-		handleResize();
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
-	return windowSize;
+    useEffect(() => {
+        const handler = () => {
+            setWindowSize(calculate());
+        };
+        window.addEventListener('resize', handler);
+
+        return () => {
+            window.removeEventListener('resize', handler);
+        };
+    }, []);
+
+    return windowSize;
 };

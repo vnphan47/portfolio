@@ -1,13 +1,17 @@
-# Getting Started with Create React App
+# React + Vite
 
-## build cli:
+### Run source
 
-### `docker build -t huunhatdev/vyphan:1.5 --platform linux/amd64 .`
+`npm run dev`
 
-### `docker push huunhatdev/vyphan:1.5`
+### Github
 
-## vps cli:
+-branch: masterv2
 
-### `sudo docker pull huunhatdev/vyphan:1.5`
+### Build image docker
 
-### `sudo docker run -d -p 3001:80 --name vyphan huunhatdev/vyphan:1.5`
+`docker build -t huunhatdev/vyphanv2 .`
+
+### Run container
+
+`docker run -d --name portfolio -p 8081:80 huunhatdev/vyphanv2`
