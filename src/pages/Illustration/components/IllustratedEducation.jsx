@@ -12,15 +12,17 @@ const IllustratedEducation = () => {
                 style={{ zIndex: 2 }}
             >
                 <img className="lg:w-[30%]" src={getImage('Front and Back spiral 1.png')} alt="" />
-                <div className="flex flex-col gap-4 py-4 md:py-16 lg:w-[40%]">
-                    <p className="font-bold text-2xl text-[#F9EED4]">Veggies Got Talent! A Fun-Filled Activity Kit</p>
+                <div className="flex flex-col  py-4 md:py-16 lg:w-[40%] px-20">
+                    <p className="font-bold text-2xl text-[#F9EED4]">Veggies Got Talent!</p>
+                    <p className="font-bold text-2xl text-[#F9EED4]">A Fun-Filled Activity Kit</p>
                     <p className="italic font-bold text-xl text-[#E8C69B]">
                         with Coloring Sheets, Rhymin&apos; Beats, and Recipes for Tasty Treats!
                     </p>
-                    <p className="text-white">
+                    <p className="text-white my-6">
                         I illustrated a 100-page-book, where the 30 veggie friends are not just ingredients but lively
                         characters dancing across the pages into the imagination of children and adults.
                     </p>
+    
                     {lg && <ButtonLearn />}
                 </div>
                 <img

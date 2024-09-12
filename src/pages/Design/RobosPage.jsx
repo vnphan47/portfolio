@@ -34,8 +34,8 @@ const RobosPage = () => {
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                     <div className="">
                         <h4 className="mb-4 text-2xl font-bold">Challenge</h4>
-                        <p className="md:pl-6">
-                            The team wanted to develop an effective
+                        <p className="md:pl-6 pr-24">
+                            The team wanted to develop an effective {' '}
                             <span className="font-semibold">Sentiment Analysis Dashboard</span> that integrates Data and
                             AI from all NFTs communities into the Solana Blockchain.
                         </p>
@@ -125,7 +125,7 @@ const RobosPage = () => {
                         <h2 className="robos__title--number text-[#BDCCEA] text-opacity-90">05</h2>
                         <h3 className="text-white robos__title--text">Wireframe</h3>
                     </div>
-                    <p className="text-white md:pl-48">
+                    <p className="text-white md:pl-48 pr-[350px]">
                         I created the high fidelity wireframes for a detailed and refined representation of a user
                         interface (UI). It helps the stakeholders visualize the design&apos;s aesthetics and
                         functionality before moving on to the actual development phase.
@@ -148,7 +148,7 @@ const RobosPage = () => {
                     <h2 className="robos__title--number text-[#43466F]">06</h2>
                     <h3 className="robos__title--text">Style Guidline</h3>
                 </div>
-                <p className="mb-10 text-3xl">
+                <p className="mb-10 text-1xl md:pl-16 w-[550px]">
                     I selected these colors to create a modern, neutral aesthetic that is often seen in
                     technology-related products and services.
                 </p>
@@ -224,17 +224,17 @@ const RobosPage = () => {
                             </div>
                             <div className="flex-1 my-auto">
                                 <h4 className="mb-5 text-2xl font-bold">Home Page</h4>
-                                <p className="text-[#BDCCEA] text-xl">Users land when they first visit the website.</p>
+                                <p className="text-[#BDCCEA] text-xl w-[300px]">Users land when they first visit the website.</p>
                             </div>
                         </div>
 
-                        <div className="flex mb-8">
+                        <div className="flex mb-4">
                             <div className="w-[60%]">
                                 <img className="w-[75%] mx-auto" src={getImage('select_wallet.png')} alt="" />
                             </div>
                             <div className="flex-1 my-auto">
                                 <h4 className="mb-5 text-2xl font-bold">Login / Registration</h4>
-                                <p className="text-[#BDCCEA] text-xl">
+                                <p className="text-[#BDCCEA] text-xl w-[300px]">
                                     Simplified user registration or log in by connecting to their crypto and NFT wallet
                                 </p>
                             </div>
@@ -243,15 +243,15 @@ const RobosPage = () => {
                         {/* launches */}
                         <div className="flex flex-col mb-8 lg:flex-row">
                             {lg && <ImageLaunches />}
-                            <div className="flex-1 my-auto">
+                            <div className="flex-1 mt-4">
                                 <h4 className="mb-5 text-2xl font-bold">Upcoming Launches</h4>
-                                <p className="text-[#BDCCEA] text-xl">
+                                <p className="text-[#BDCCEA] text-xl w-[400px]">
                                     A central hub for users to stay informed about what&apos;s on the horizon and plan
                                     their engagement accordingly <br />
                                     <br />
                                 </p>
                                 {!lg && <ImageLaunches />}
-                                <div className="flex flex-row lg:flex-col">
+                                <div className="flex flex-row lg:flex-col w-[400px]">
                                     <span>
                                         Each NFT Collection will have a specific sentiment (
                                         <span className="text-[#51C274]">Positive</span>,{' '}
@@ -270,18 +270,19 @@ const RobosPage = () => {
                             </div>
                         </div>
                         {/* my collection */}
-                        <div className="flex flex-col-reverse lg:flex-row-reverse">
+                        <div className="flex flex-col-reverse lg:flex-row-reverse " >
                             <div className="w-full lg:w-[45%]">
                                 <img className="w-full lg:ml-auto " src={getImage('my_collections.png')} alt="" />
                             </div>
                             <div className="flex-1 lg:pl-[8%] my-auto">
                                 <h4 className="mb-5 text-2xl font-bold">My Collection</h4>
-                                <p className="text-[#BDCCEA] text-xl mb-4">
+                                <p className="text-[#BDCCEA] text-xl mb-4 w-[400px]">
                                     Major role - allow users to keep track of their favorite or collected items in an
                                     organized manner. Also, the <span className="font-bold">Spending</span> Summary
                                     graph provides users with insights into their spending patterns or investments
                                     related to their collections.
                                 </p>
+                                <h4 className="mt-40 mb-8 text-2xl font-bold">More Screens</h4>
                             </div>
                         </div>
                     </div>
@@ -289,6 +290,7 @@ const RobosPage = () => {
             </div>
 
             {/* footer */}
+            
             <img className="w-full max-w-[2048px] mx-auto" src={getImage('ROBOS Display.png')} alt="" />
         </div>
     );

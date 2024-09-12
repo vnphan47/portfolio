@@ -36,7 +36,7 @@ const NutriBlog = () => {
                 title={`Here is where I get to communicate\nutrition concepts in a visual manner!`}
                 color="#FDDBDE"
             />
-            <p className="mb-8 italic text-center text-black text-opacity-50 whitespace-pre-wrap">
+            <p className="mb-8 px-[35vh] italic text-center text-black text-opacity-50 whitespace-pre-wrap">
                 Disclaimer: The content of this blog is written by a nutrition student and is intended for informational
                 purposes only. It should not be taken as professional medical advice; always consult a qualified
                 healthcare provider for personalized recommendation

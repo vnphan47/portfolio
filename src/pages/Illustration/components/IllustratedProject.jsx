@@ -54,10 +54,10 @@ export default IllustratedProject;
 
 const ImageItem = ({ imgName = '', title = '', subTitle = '', path = '' }) => {
     return (
-        <Link to={path} className="text-center">
+        <Link to={path} className="text-center ">
             <img className="aspect-[3/4] w-full" src={getImage(imgName)} />
-            <h3 className="my-2 font-semibold">{title}</h3>
-            <h5 className="text-sm font-Jomo text-[#949494] font-normal">{subTitle}</h5>
+            <h3 className="mt-3 font-semibold">{title}</h3>
+            <h5 className=" text-sm font-Jomo text-[#949494] font-normal">{subTitle}</h5>
         </Link>
     );
 };

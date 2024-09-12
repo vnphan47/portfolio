@@ -3,9 +3,9 @@ import TitleBlog from './components/TitleBlog';
 
 const NutriBlogStudy = () => {
     return (
-        <div className="container__box">
+        <div className="container__box px-[180px] border-t-[1px] border-solid border-t-black pt-10">
             <TitleBlog title="Why I Chose to Study Nutrition" date="February 14, 2024" />
-
+        
             <div className="aspect-video bg-[#FCF2F2] flex items-center justify-center mt-10">
                 <img className="object-contain h-4/5" src={getImage('Asset 4 1.png')} alt="" />
             </div>

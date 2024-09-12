@@ -84,7 +84,7 @@ export const router = [
             },
             {
                 path: 'nutri',
-                element: <Outlet />,
+                element:<Outlet/>,
                 children: [
                     {
                         index: true,

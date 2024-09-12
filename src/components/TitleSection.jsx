@@ -2,7 +2,7 @@ import { IconBgTitle } from '../assets/icons/IconBgTitle';
 
 const TitleSection = ({ children, title = '', color = '' }) => {
     return (
-        <div className="relative mx-auto mb-10 text-3xl text-center font font-fair">
+        <div className="relative mx-auto mb-4 text-3xl text-center font font-fair">
             <div className="absolute top-0 left-1/2 translate-x-[-50%]">
                 <IconBgTitle color={color} />
             </div>

@@ -35,13 +35,26 @@ const Design = () => {
             </TitleSection>
             <div className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 ">
                 {listItem.map((item) => (
-                    <Link key={item.id} to={item.path}>
+                    
+                        item.title === "RepE Website" ? 
+                        <Link key={item.id} to={item.path} target="_blank" rel="noopener noreferrer">
                         <img className="aspect-[5/4] w-full object-cover" src={getImage(`${item.imgSrc}.png`)} alt="" />
-                        <div className="my-2 text-center">
+                        <div className="mt-3 text-center">
                             <h3 className="font-semibold">{item.title}</h3>
                             <span className="text-[#949494]">{item.subTitle}</span>
                         </div>
                     </Link>
+                    :
+                    <Link key={item.id} to={item.path}>
+                    <img className="aspect-[5/4] w-full object-cover" src={getImage(`${item.imgSrc}.png`)} alt="" />
+                    <div className="mt-3 text-center">
+                        <h3 className="font-semibold">{item.title}</h3>
+                        <span className="text-[#949494]">{item.subTitle}</span>
+                    </div>
+                </Link>
+                    
+
+            
                 ))}
             </div>
         </div>
