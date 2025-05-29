@@ -2,6 +2,7 @@
 
 ### Run source
 
+`npm install`
 `npm run dev`
 
 ### Github
