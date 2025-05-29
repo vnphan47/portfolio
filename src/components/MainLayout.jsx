@@ -49,7 +49,7 @@ const MainLayout = () => {
                         <IconMail />
                     </a>
                 </div>
-                <span className="font-normal">© 2024 Vy Phan. All rights reserved.</span>
+                <span className="font-normal">© 2025 Vy Phan. All rights reserved.</span>
             </div>
         </div>
     );
