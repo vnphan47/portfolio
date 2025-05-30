@@ -14,37 +14,13 @@ const NutriBlogStudy = () => {
                     My journey to nutrition was led by personal experiences with eating disorders during high school.
                 </h3>
                 <img className="mx-auto mb-4 md:float-right" src={getImage('Layer 1.png')} alt="" />
+                <p className="mb-6">
+                    My relationship with food and nutrition continued to shape my journey in unexpected ways. When I was in high school, I battled with eating disorders. As a teenager, I found myself vulnerable to social media's influence and public opinion about body images and self-acceptance. I compared my physical appearance to others. And this causes a complexity in my eating habits. With shallow understanding about diet, I restricted myself from eating, assuming the less I eat the more weight I'd lose. When I allowed myself with "treat days" on weekends, I tend to eat and drink indiscriminately, thinking that I only have these periods to eat what I want. Then, I'd feel bad and try to vomit all the foods that I had consumed. People thought I was successfully losing weight. They admired and asked me for tips. I smiled and said, "I tracked what I eat". But apparently, they did not know what's behind my process; even my parents did not know that I vomited every time after I went to restaurants with them. The consequences of this eating disorders pattern resulted in concerning symptoms: persisted low blood pressure, and yellowish skin, which my mom and I thought that it's because I ate too much sweet potato and its color pigment got expose on my skin.
+                </p>
                 <p>
-                    I did not have enough access to any professional assistance, both physically and mentally. Although
-                    I understood that each individual&apos;s body has a different metabolism and mechanism, general
-                    knowledge and unreliable information found on the internet did not help me improve my matter. Not
-                    until years later did I have a chance to take nutrition courses that I learned how to overcome my
-                    eating disorders and develop good relationships with food. Motivated by my transformation, I aspire
-                    to specialize in nutrition and food to assist individuals facing similar challenges.
+                    The turning point came when I fainted during the blood draw for my pre-admission health assessment for UMass Amherst. By the time I saw my mom's panicked face, I knew I was wrong. However, eating disorder is not a condition that can be easily overcome. While I was trying to adjust my eating habits, I learned that it is more than just personal willpower. Not until years later did I have a change to take nutrition courses that I learned how to overcome my eating disorders and develop good relationships with food through scientific understanding rather than misconceptions. Motivated by my transformation, I aspired to specialize in nutrition and health to assist individuals facing similar challenges.
                 </p>
             </div>
-            <p className="px__mobile">
-                Initially, my understanding of nutrition was limited to weight and physical appearance management.
-                Nevertheless, delving into nutrition courses has provided me with a novel vision and mindset. I realized
-                how magical nutrition study is. The true meaning of eating is not only to fulfill our satiety but also
-                to obtain nutrients, serving as vital components in cellular function, disease prevention, and overall
-                well-being. However, even though nutrition study is well-known, it is still a very young field of
-                science and public health that needs to be recognized more and investigated more in-depth. Individuals
-                need to gain proper awareness of their bodies and the significance of nutrients in overall well-being.
-                <br />
-                <br />
-                I read a book, written by a Chinese doctor, talking about the lost of nutrition study. The author has
-                spent nearly 20 years researching and reflecting on medicine and nutrition, along with practice, to
-                provide valuable knowledge and accurate solutions to protect health and prevent diseases. Utilizing
-                traditional Oriental medicine beliefs, he demonstrated the significance of nutrition and its correlation
-                with health. Despite its wonderful capability, nutrition study remains underestimated in modern medicine
-                as well as the scarcity of professionals with in-depth knowledge in the field.
-                <br />
-                <br />
-                Therefore, I am eager to become one of the first leaders bringing nutrition knowledge out there and
-                leaving a huge impact on modern public health, assisting individuals in prioritizing their health
-                through proper nutrition and eating habits.
-            </p>
         </div>
     );
 };

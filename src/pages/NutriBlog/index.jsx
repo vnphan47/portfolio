@@ -7,17 +7,10 @@ const NutriBlog = () => {
 
     const listItem = [
         {
-            id: 1,
-            title: 'Blog Title',
-            subTitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-            imgSrc: '',
-            path: ''
-        },
-        {
             id: 2,
             title: 'Antioxidants in Action: Battling Inflammation',
             subTitle:
-                'Welcome to the World of Antioxidants and Inflammation! It&apos;s going to be an action-packed journey you won&apos;t want to miss!',
+                'Welcome to the world of antioxidants and inflammation! It\'s going to be an action-packed journey you won\'t want to miss!',
             imgSrc: 'image 1.png',
             path: 'antioxidants'
         },
@@ -33,7 +26,7 @@ const NutriBlog = () => {
     return (
         <div className="w-full container__box">
             <TitleSection
-                title={`Here is where I get to communicate\nutrition concepts in a visual manner!`}
+                title={`Here is where I get to communicate\nnutrition concepts in a visual manner!`}
                 color="#FDDBDE"
             />
             <p className="mb-8 px-[35vh] italic text-center text-black text-opacity-50 whitespace-pre-wrap">
@@ -41,7 +34,7 @@ const NutriBlog = () => {
                 purposes only. It should not be taken as professional medical advice; always consult a qualified
                 healthcare provider for personalized recommendation
             </p>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 justify-items-center max-w-4xl mx-auto">
                 {listItem.map((item) => (!!item.path || md ? <ItemNutriBlog key={item.id} {...item} /> : null))}
             </div>
         </div>

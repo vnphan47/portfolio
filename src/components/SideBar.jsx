@@ -12,8 +12,8 @@ const SideBar = () => {
             <NavLink to={'/design'} className={getClassName}>
                 UX/UI Design
             </NavLink>
-            <NavLink to={'/logofolio'} className={getClassName}>
-                Logofolio
+            <NavLink to={'/content'} className={getClassName}>
+                Content Creation
             </NavLink>
             <NavLink to={'/nutri'} className={getClassName}>
                 NutriBlog
