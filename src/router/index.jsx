@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import MainLayout from '../components/MainLayout';
 import Illustration from '../pages/Illustration';
-import LogoFolio from '../pages/Logofolio';
 import NutriBlog from '../pages/NutriBlog';
 import NutriBlogStudy from '../pages/NutriBlog/NutriBlogStudy';
 import NutriBlogAntioxidants from '../pages/NutriBlog/NutriBlogAntioxidants';
@@ -16,6 +15,11 @@ import FoodPlayPage from '../pages/Design/FoodPlayPage';
 import RobosPage from '../pages/Design/RobosPage';
 import IllustrationPage from '../pages/Illustration/IllustrationPage';
 import EducationPage from '../pages/Illustration/EducationPage';
+import LogofolioPage from '../pages/Illustration/LogofolioPage';
+import UMassDiningPage from '../pages/Illustration/UMassDiningPage';
+import ContentCreation from '../pages/ContentCreation';
+import ContentCreationPage from '../pages/ContentCreation/ContentCreationPage';
+import InstagramPage from '../pages/ContentCreation/InstagramPage';
 
 export const router = [
     {
@@ -31,12 +35,20 @@ export const router = [
                         element: <IllustrationPage />
                     },
                     {
+                        path: 'umass-dining',
+                        element: <UMassDiningPage />
+                    },
+                    {
                         path: 'kitchen',
                         element: <Kitchen />
                     },
                     {
                         path: 'nft',
                         element: <NftPage />
+                    },
+                    {
+                        path: 'logofolio',
+                        element: <LogofolioPage />
                     },
                     {
                         path: 'veggies',
@@ -79,8 +91,18 @@ export const router = [
                 ]
             },
             {
-                path: 'logofolio',
-                element: <LogoFolio />
+                path: 'content',
+                element: <ContentCreation />,
+                children: [
+                    {
+                        index: true,
+                        element: <ContentCreationPage />
+                    },
+                    {
+                        path: 'instagram',
+                        element: <InstagramPage />
+                    }
+                ]
             },
             {
                 path: 'nutri',
