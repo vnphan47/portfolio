@@ -13,6 +13,12 @@ const UMassDiningPage = () => {
         },
         {
             imgName: 'UMass Safe App (2).png'
+        },
+        {
+            imgName: 'UMass Dining Communication Chain.png'
+        },
+        {
+            imgName: 'UMass Dining Prevent Cross contact.png'
         }
     ];
 

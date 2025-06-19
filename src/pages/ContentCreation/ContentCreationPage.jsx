@@ -141,12 +141,12 @@ const ContentCreationPage = () => {
                         </div>
                         <h3 className="text-xl font-semibold mb-2">UMass Vietnamese Dance Movement</h3>
                         <a 
-                            href="https://www.instagram.com/umass.vdm/"
+                            href="https://www.instagram.com/uma.vdm/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#6B7B48] hover:underline"
                         >
-                            @umass.vdm
+                            @uma.vdm
                         </a>
                     </div>
 
